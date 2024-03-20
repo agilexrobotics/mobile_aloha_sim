@@ -1,0 +1,49 @@
+arx5_1:
+   # publish all joint states--------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Gazebo use controller that ros_control(joint_position_controller)
+  # Position Controllers------------------
+  arm1_joint0_position_controller:
+    type: position_controllers/JointPositionController
+    joint: arm1_joint0
+    # pid: {p: 10000000,  i: 0.0, d: 1, i_clamp: 1}
+
+  arm1_joint1_position_controller:
+    type: position_controllers/JointPositionController
+    joint: arm1_joint1
+    # pid: {p: 10000000,  i: 0.0, d: 1, i_clamp: 1}
+
+  arm1_joint2_position_controller:
+    type: position_controllers/JointPositionController
+    joint: arm1_joint2
+    # pid: {p: 10000000,  i: 0.0, d: 1, i_clamp: 1}
+
+  arm1_joint3_position_controller:
+    type: position_controllers/JointPositionController
+    joint: arm1_joint3
+    # pid: {p: 10000000,  i: 0.0, d: 1, i_clamp: 1}
+
+  arm1_joint4_position_controller:
+    type: position_controllers/JointPositionController
+    joint: arm1_joint4
+    # pid: {p: 10000000,  i: 0.0, d: 1, i_clamp: 1}
+
+  arm1_joint5_position_controller:
+    type: position_controllers/JointPositionController
+    joint: arm1_joint5
+    # pid: {p: 10000000,  i: 0.0, d: 1, i_clamp: 1}
+
+
+
+
+gazebo_ros_control:
+  pid_gains:
+    arm1_joint0: {p: 0.001,  i: 0.0, d: 0.01, i_clamp: 1}
+    arm1_joint1: {p: 0.001,  i: 0.0, d: 0.01, i_clamp: 1}
+    arm1_joint2: {p: 0.001,  i: 0.0, d: 0.01, i_clamp: 1}
+    arm1_joint3: {p: 0.001,  i: 0.0, d: 0.01, i_clamp: 1}
+    arm1_joint4: {p: 0.001,  i: 0.0, d: 0.01, i_clamp: 1}
+    arm1_joint5: {p: 0.001,  i: 0.0, d: 0.01, i_clamp: 1}

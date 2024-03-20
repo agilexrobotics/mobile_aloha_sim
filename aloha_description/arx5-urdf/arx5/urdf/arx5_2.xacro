@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<!-- <xacro:include filename="$(find arx5)/urdf/transmission.xacro"/> -->
+
+<robot name="arx5_2" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <link
+    name="arm2_base">
+    <inertial>
+      <origin
+        xyz="-2.9972E-05 3.056E-05 0.027301"
+        rpy="0 0 0" />
+      <mass
+        value="0.44038" />
+      <inertia
+        ixx="0.00017"
+        ixy="0.00000"
+        ixz="0.00000"
+        iyy="0.00018"
+        iyz="0.00000"
+        izz="0.00016" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm2_link1">
+    <inertial>
+      <origin
+        xyz="0.00609525411893452 -0.00429681977500749 0.0179590247477389"
+        rpy="0 0 0" />
+      <mass
+        value="0.0608351104988555" />
+      <inertia
+        ixx="0.00008"
+        ixy="0.00000"
+        ixz="0.00001"
+        iyy="0.00003"
+        iyz="0.00000"
+        izz="0.00007" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_joint0"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0603"
+      rpy="0 0 0" />
+    <parent
+      link="arm2_base" />
+    <child
+      link="arm2_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="arm2_link2">
+    <inertial>
+      <origin
+        xyz="-0.132382037190567 0.00220380675553821 0.000111790164679923"
+        rpy="0 0 0" />
+      <mass
+        value="1.0733279014126" />
+      <inertia
+        ixx="0.00050"
+        ixy="0.00000"
+        ixz="-0.00004"
+        iyy="0.01596"
+        iyz="0.00000"
+        izz="0.01602" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_joint1"
+    type="revolute">
+    <origin
+      xyz="0.02 0 0.0402"
+      rpy="0 0 0" />
+    <parent
+      link="arm2_link1" />
+    <child
+      link="arm2_link2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.83"
+      upper="1.83"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="arm2_link3">
+    <inertial>
+      <origin
+        xyz="0.187203287369961 -0.000305676361444925 -0.0514832866415513"
+        rpy="0 0 0" />
+      <mass
+        value="0.499404738025019" />
+      <inertia
+        ixx="0.00033"
+        ixy="-0.00006"
+        ixz="-0.00039"
+        iyy="0.00387"
+        iyz="0.00001"
+        izz="0.00383" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_joint2"
+    type="revolute">
+    <origin
+      xyz="-0.264 0 0"
+      rpy="-3.1416 -0.2 0" />
+    <parent
+      link="arm2_link2" />
+    <child
+      link="arm2_link3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="arm2_link4">
+    <inertial>
+      <origin
+        xyz="0.0388884702662706 0.00295168681334743 -0.0353282735009622"
+        rpy="0 0 0" />
+      <mass
+        value="0.0809712553169999" />
+      <inertia
+        ixx="0.00013"
+        ixy="-0.00001"
+        ixz="-0.00006"
+        iyy="0.00016"
+        iyz="0.00001"
+        izz="0.00010" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_joint3"
+    type="revolute">
+    <origin
+      xyz="0.245 0 -0.056"
+      rpy="0 0 0" />
+    <parent
+      link="arm2_link3" />
+    <child
+      link="arm2_link4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="arm2_link5">
+    <inertial>
+      <origin
+        xyz="0.00289956909960302 3.15826689885766E-05 0.0526188859211408"
+        rpy="0 0 0" />
+      <mass
+        value="0.602357399313257" />
+      <inertia
+        ixx="0.00072"
+        ixy="0.00000"
+        ixz="0.00005"
+        iyy="0.00069"
+        iyz="0.00000"
+        izz="0.00021" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_joint4"
+    type="revolute">
+    <origin
+      xyz="0.06575 -0.001 -0.0825"
+      rpy="0 0 0" />
+    <parent
+      link="arm2_link4" />
+    <child
+      link="arm2_link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="100"
+      velocity="1000" />
+  </joint>
+  <link
+    name="arm2_link6">
+    <inertial>
+      <origin
+        xyz="0.0471798400661976 0.000102970421835668 -0.000138510949393961"
+        rpy="0 0 0" />
+      <mass
+        value="0.462244960775882" />
+      <inertia
+        ixx="0.00068"
+        ixy="0.00000"
+        ixz="0.00000"
+        iyy="0.00036"
+        iyz="-0.00001"
+        izz="0.00091" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arx5/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2_joint5"
+    type="revolute">
+    <origin
+      xyz="0.02845 0 0.0825"
+      rpy="-3.1416 0 0" />
+    <parent
+      link="arm2_link5" />
+    <child
+      link="arm2_link6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="1000" />
+  </joint>
+
+
+  <xacro:macro name="arx5_transmission" params="prefix hard_interface reduction:=1">
+
+    <transmission name="${prefix}tran0">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}">
+        <hardwareInterface>hardware_interface/${hard_interface}</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}motor0">
+        <hardwareInterface>hardware_interface/${hard_interface}</hardwareInterface>
+        <mechanicalReduction>${reduction}</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+
+    <xacro:arx5_transmission prefix="arm2_joint0" hard_interface="PositionJointInterface">
+    </xacro:arx5_transmission>
+    <xacro:arx5_transmission prefix="arm2_joint1" hard_interface="PositionJointInterface">
+    </xacro:arx5_transmission>
+    <xacro:arx5_transmission prefix="arm2_joint2" hard_interface="PositionJointInterface">
+    </xacro:arx5_transmission>
+    <xacro:arx5_transmission prefix="arm2_joint3" hard_interface="PositionJointInterface">
+    </xacro:arx5_transmission>
+    <xacro:arx5_transmission prefix="arm2_joint4" hard_interface="PositionJointInterface">
+    </xacro:arx5_transmission>
+    <xacro:arx5_transmission prefix="arm2_joint5" hard_interface="PositionJointInterface">
+    </xacro:arx5_transmission>
+
+
+  <gazebo>
+      <plugin name="arx5_2_gazebo_ros_control" filename="libgazebo_ros_control.so">
+          <robotNamespace>/arx5_2</robotNamespace>
+      </plugin>
+  </gazebo>
+</robot>

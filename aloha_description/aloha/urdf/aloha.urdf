@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="aloha">
+  <!-- <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.21357 0.0062814 -0.10077"
+        rpy="0 0 0" />
+      <mass
+        value="10.33509" />
+      <inertia
+        ixx="0.000133"
+        ixy="-1.0087E-11"
+        ixz="1.9283E-10"
+        iyy="0.00024335"
+        iyz="5.783E-06"
+        izz="0.0001333" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="-0.05 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aloha/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="-0.05 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aloha/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link> -->
+  <link
+    name="box1_Link">
+    <inertial>
+      <origin
+        xyz="-0.17227 -0.0012276 0.023432"
+        rpy="0 0 0.0" />
+      <mass
+        value="0.54994" />
+      <inertia
+        ixx="0.012264"
+        ixy="-9.2432E-06"
+        ixz="0.0001761"
+        iyy="0.0045226"
+        iyz="-0.00063248"
+        izz="0.016558" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="-0.05 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aloha/meshes/box1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="-0.05 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aloha/meshes/box1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="box1"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="box1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="box2_Link">
+    <inertial>
+      <origin
+        xyz="0.015107 -0.027922 0.53672"
+        rpy="0 0 0" />
+      <mass
+        value="3.736" />
+      <inertia
+        ixx="0.097545"
+        ixy="-9.2609E-06"
+        ixz="0.00015366"
+        iyy="0.045841"
+        iyz="-0.0020459"
+        izz="0.084773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="-0.05 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aloha/meshes/box2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="-0.05 0 0" />
+      <geometry>
+        <mesh
+          filename="package://aloha/meshes/box2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="box2"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="box1_Link" />
+    <child
+      link="box2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

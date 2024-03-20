@@ -1,0 +1,73 @@
+controller_list:
+  - name: fl_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - fl_joint1
+      - fl_joint2
+      - fl_joint3
+      - fl_joint4
+      - fl_joint5
+      - fl_joint6
+  - name: fr_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - fr_joint1
+      - fr_joint2
+      - fr_joint3
+      - fr_joint4
+      - fr_joint5
+      - fr_joint6
+  - name: lr_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - lr_joint1
+      - lr_joint2
+      - lr_joint3
+      - lr_joint4
+      - lr_joint5
+      - lr_joint6
+  - name: rr_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - rr_joint1
+      - rr_joint2
+      - rr_joint3
+      - rr_joint4
+      - rr_joint5
+      - rr_joint6
+  - name: fl_gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - fl_joint7
+      - fl_joint8
+  - name: fr_gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - fr_joint7
+      - fr_joint8
+  - name: lr_gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - lr_joint7
+      - lr_joint8
+  - name: rr_gripper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - rr_joint7
+      - rr_joint8

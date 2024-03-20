@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: arx5_description
+    relative_path: urdf/arx5_description.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/arx5_description.srdf
+  CONFIG:
+    author_name: agilex
+    author_email: agilex@agilex.ai
+    generated_timestamp: 1710395769

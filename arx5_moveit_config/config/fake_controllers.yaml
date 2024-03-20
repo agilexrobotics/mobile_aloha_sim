@@ -1,0 +1,70 @@
+controller_list:
+  - name: fake_fl_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - fl_joint1
+      - fl_joint2
+      - fl_joint3
+      - fl_joint4
+      - fl_joint5
+      - fl_joint6
+  - name: fake_fr_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - fr_joint1
+      - fr_joint2
+      - fr_joint3
+      - fr_joint4
+      - fr_joint5
+      - fr_joint6
+  - name: fake_lr_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - lr_joint1
+      - lr_joint2
+      - lr_joint3
+      - lr_joint4
+      - lr_joint5
+      - lr_joint6
+  - name: fake_rr_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - rr_joint1
+      - rr_joint2
+      - rr_joint3
+      - rr_joint4
+      - rr_joint5
+      - rr_joint6
+  - name: fake_fl_gripper_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - fl_joint7
+      - fl_joint8
+  - name: fake_fr_gripper_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - fr_joint7
+      - fr_joint8
+  - name: fake_lr_gripper_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - lr_joint7
+      - lr_joint8
+  - name: fake_rr_gripper_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - rr_joint7
+      - rr_joint8
+initial:  # Define initial robot poses per group
+  - group: fl_arm
+    pose: home
+  - group: fr_arm
+    pose: home
+  - group: lr_arm
+    pose: home
+  - group: rr_arm
+    pose: home
+  - group: fl_gripper
+    pose: close
+  - group: fr_gripper
+    pose: close

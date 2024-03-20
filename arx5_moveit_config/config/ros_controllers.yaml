@@ -1,0 +1,228 @@
+fl_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - fl_joint1
+    - fl_joint2
+    - fl_joint3
+    - fl_joint4
+    - fl_joint5
+    - fl_joint6
+  gains:
+    fl_joint1:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fl_joint2:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fl_joint3:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fl_joint4:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fl_joint5:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fl_joint6:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+fr_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - fr_joint1
+    - fr_joint2
+    - fr_joint3
+    - fr_joint4
+    - fr_joint5
+    - fr_joint6
+  gains:
+    fr_joint1:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fr_joint2:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fr_joint3:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fr_joint4:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fr_joint5:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    fr_joint6:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+lr_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - lr_joint1
+    - lr_joint2
+    - lr_joint3
+    - lr_joint4
+    - lr_joint5
+    - lr_joint6
+  gains:
+    lr_joint1:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    lr_joint2:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    lr_joint3:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    lr_joint4:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    lr_joint5:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    lr_joint6:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+rr_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - rr_joint1
+    - rr_joint2
+    - rr_joint3
+    - rr_joint4
+    - rr_joint5
+    - rr_joint6
+  gains:
+    rr_joint1:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    rr_joint2:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    rr_joint3:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    rr_joint4:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    rr_joint5:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+    rr_joint6:
+      p: 1000
+      d: 0.1
+      i: 0
+      i_clamp: 0
+
+fl_gripper_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - fl_joint7
+    - fl_joint8
+  gains:
+    fl_joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    fl_joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+
+fr_gripper_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - fr_joint7
+    - fr_joint8
+  gains:
+    fr_joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    fr_joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+
+lr_gripper_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - lr_joint7
+    - lr_joint8
+  gains:
+    lr_joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    fl_joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+
+rr_gripper_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - rr_joint7
+    - rr_joint8
+  gains:
+    rr_joint7:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    rr_joint8:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="gui" default="true"/>
+        <arg name="use_sim_time" default="ture"/>
+      
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find arx5)/urdf/arx5_2.xacro'" />
+  <node name="arx5_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param robot_description -model arx5_1 -z 0.05"
+    respawn="false" />
+
+    <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node> -->
+    <rosparam file="$(find arx5)/config/arx5_1_control.yaml" command="load"/>
+    <node name="axr5_1_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"  ns="/arx5_1"
+    args="joint_state_controller arm1_joint0_position_controller arm1_joint1_position_controller arm1_joint2_position_controller
+    arm1_joint3_position_controller arm1_joint4_position_controller arm1_joint5_position_controller"/>
+    
+    <!-- <rosparam file="$(find tracer_gazebo_sim)/config/arx5_2_control.yaml" command="load"/>
+
+    <node name="axr5_2_controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"  ns="/arx5_2"
+    args="joint_state_controller arm2_joint0_position_controller arm2_joint1_position_controller arm2_joint2_position_controller
+    arm2_joint3_position_controller arm2_joint4_position_controller arm2_joint5_position_controller"/>
+     -->
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
+    <remap from="/joint_states" to="/arx5_1/joint_states" />
+
+        </node>
+
+  </launch>
+

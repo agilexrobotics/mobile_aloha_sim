@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="robot_namespace" default="/"/>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find arx5_moveit_config)/config/ros_controllers.yaml" command="load"/>
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find tracer_gazebo_sim)/config/tracer_v1_control.yaml" command="load"/>
+
+  <!-- Load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="fl_arm_controller fr_arm_controller lr_arm_controller rr_arm_controller 
+              fl_gripper_controller fr_gripper_controller lr_gripper_controller rr_gripper_controller
+              tracer_state_controller tracer_motor_r_controller tracer_motor_l_controller"/>
+
+  <node name="tracer_skid_steer_controller" pkg="tracer_gazebo_sim" type="tracer_skid_steer_controller">
+    <param name="robot_namespace" type="string" value="$(arg robot_namespace)" />
+  </node>
+
+</launch>
