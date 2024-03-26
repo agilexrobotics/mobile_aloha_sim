@@ -103,7 +103,7 @@ aloha_mujoco
 
 #### 执行test
 
-ps:前提要安装`mujoco_py`并在`basharc`中增加如下:
+ps:前提要安装`mujoco_py`并在`bashrc`中增加如下:
 
 ```bash
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
