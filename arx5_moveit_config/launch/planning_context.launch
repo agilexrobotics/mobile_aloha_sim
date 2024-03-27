@@ -6,8 +6,8 @@
   <arg name="robot_description" default="robot_description"/>
 
   <!-- Load universal robot description format (URDF) -->
-  <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find arx5_description)/urdf/arx5_description.urdf"/>
-
+  <!-- <param if="$(arg load_robot_description)" name="$(arg robot_description)" textfile="$(find arx5_description)/urdf/arx5_description.urdf"/> -->
+  <param if="$(arg load_robot_description)" name="robot_description" command="xacro --inorder '$(find arx5_description)/urdf/arx5_description.urdf'" />
   <!-- The semantic description that corresponds to the URDF -->
   <param name="$(arg robot_description)_semantic" textfile="$(find arx5_moveit_config)/config/arx5_description.srdf" />
 
