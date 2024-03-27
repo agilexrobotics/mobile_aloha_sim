@@ -54,7 +54,7 @@ catkin_make
 └── doc
 ```
 
-其中，aloha_mujoco是mujoco仿真下的实现，具体请参考aloha_mujoco文件夹中的README
+其中，aloha_mujoco是mujoco仿真下的实现，具体请参考aloha_mujoco文件夹中的[README](./aloha_mujoco/README.MD)
 
 ## 启动仿真
 
