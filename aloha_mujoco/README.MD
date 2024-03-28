@@ -32,7 +32,7 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/x86_64-linux-gnu/libGL.
 要包含在 `mujoco-py` 您自己的包中，请将其添加到您的要求中，如下所示：
 
 ```bash
-mujoco-py<2.2,>=2.1
+pip install -U 'mujoco-py<2.2,>=2.1'
 ```
 
 ## Troubleshooting 故障 排除
