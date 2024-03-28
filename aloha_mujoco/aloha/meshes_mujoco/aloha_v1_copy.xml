@@ -17,17 +17,16 @@
     <mesh name="link6" file="link6.STL"/>
     <mesh name="link7" file="link7.STL"/>
     <mesh name="link8" file="link8.STL"/>
+    <mesh name="dabai" file="dabai.STL"/>
   </asset>
   <worldbody>
     <light diffuse=".7 .7 .7" pos="0 0 5" dir="0 0 -1"/>
-    <!-- <geom type="plane" size="2 2 1" rgba="1 1 1 1"/> -->
     <geom type="plane" size="3 2 .01" material="grid"/>
-    <!-- <geom size="5e-05 5e-05 5e-05" quat="0.999688 -0.0249974 0 0" type="box" contype="0" conaffinity="0" group="1" density="0"/>
-    <geom size="5e-05 5e-05 5e-05" quat="0.999688 -0.0249974 0 0" type="box"/> -->
     <geom pos="0.5 0.65 0" quat="0.707 0.707 0 0" type="mesh" group="1" density="0.950" rgba="0.79216 0.81961 0.93333 1" mesh="table"/>
     <geom pos="0 0 0" euler="0 0 0" type="mesh" group="1" density="7.85" rgba="0.79216 0.81961 0.93333 1" mesh="base_link_aloha"/>
     <geom pos="0 0 0.155" euler="0 0 0" type="mesh" group="1" density="7.85" rgba="0.79216 0.81961 0.93333 1" mesh="box2_Link"/>
-    
+    <geom pos="0.2 -0.01 0.863" euler="0 1.57 1.57" type="mesh" group="1" density="2.83" rgba="0.898039 0.917647 0.929412 1" mesh="dabai"/>
+    <camera name="f_dabai" pos="0.2 -0.01 0.863" euler="0 -1.57 -1.57" fovy="41" />
     <geom pos="0.233 0.3 0.761" type="mesh" density="2.83" rgba="0.75294 0.75294 0.75294 1" mesh="base_link"/>
     <geom pos="0.234 -0.303 0.761" type="mesh" density="2.83" rgba="0.75294 0.75294 0.75294 1" mesh="base_link"/>
 
@@ -37,32 +36,34 @@
       <geom type="mesh" group="1" density="2.83" rgba="0.752941 0.752941 0.752941 1" mesh="link1"/>
       <body name="fl_link2" pos="0.02 0 0.0402">
         <inertial pos="-0.132382 0.00220381 0.00011179" quat="0 0.706195 0 0.708017" mass="1.07333" diaginertia="0.0160201 0.01596 0.000499897"/>
-        <joint name="fl_joint2" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="200"/>
+        <joint name="fl_joint2" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="100"/>
         <geom type="mesh" group="1" density="2.83" rgba="0.752941 0.752941 0.752941 1" mesh="link2"/>
         <body name="fl_link3" pos="-0.264 0 0" quat="-3.67321e-06 -1 0 0">
           <inertial pos="0.187203 -0.000305676 -0.0514833" quat="0.269626 0.618013 0.251786 0.694238" mass="0.499405" diaginertia="0.00388848 0.00385541 0.000286113"/>
-          <joint name="fl_joint3" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="100"/>
+          <joint name="fl_joint3" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="20"/>
           <geom type="mesh" group="1" density="2.83" rgba="0.752941 0.752941 0.752941 1" mesh="link3"/>
           <body name="fl_link4" pos="0.245 0 -0.056">
             <inertial pos="0.0388885 0.00295169 -0.0353283" quat="0.913916 -0.0752199 0.315785 -0.243679" mass="0.0809713" diaginertia="0.000184798 0.000152076 5.31251e-05"/>
-            <joint name="fl_joint4" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="1" />
+            <joint name="fl_joint4" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="5" />
             <geom type="mesh" density="2.83" rgba="0.898039 0.917647 0.929412 1" mesh="link4"/>
             <body name="fl_link5" pos="0.06575 -0.001 -0.0825">
               <inertial pos="0.00289957 3.15827e-05 0.0526189" quat="0.998829 0 -0.0483866 0" mass="0.602357" diaginertia="0.000724856 0.00069 0.000205144"/>
               <joint name="fl_joint5" pos="0 0 0" axis="0 0 1" limited="true" range="-10 10" damping="2" />
               <geom type="mesh" density="2.83" rgba="0.752941 0.752941 0.752941 1" mesh="link5"/>
               <body name="fl_link6" pos="0.02845 0 0.0825" quat="-3.67321e-06 -1 0 0">
+                <geom type="mesh" pos="0.0275 0 0.0585" euler="0 1.74 1.57" density="2.83" rgba="0.898039 0.917647 0.929412 1" mesh="dabai"/>
+                <camera name="fl_dabai" pos="0.0275 0 0.0585" euler="0 -1.4 -1.57" fovy="41" />
                 <inertial pos="0.0471798 0.00010297 -0.000138511" quat="0.495436 0.504523 -0.504523 0.495436" mass="0.462245" diaginertia="0.000910182 0.00068 0.000359818"/>
                 <joint name="fl_joint6" pos="0 0 0" axis="1 0 0" limited="true" range="-10 10" damping="0.1"/>
                 <geom type="mesh" density="2.83" rgba="0.898039 0.917647 0.929412 1" mesh="link6"/>
                 <body name="fl_link7" pos="0.073574 0.024629 0">
                   <inertial pos="-0.000327643 -0.00482005 -0.00167541" quat="0.5 0.5 0.5 0.5" mass="0.0484017" diaginertia="2e-05 2e-05 1e-05"/>
-                  <joint name="fl_joint7" pos="0 0 0" axis="0 1 0" type="slide" limited="true" range="0 0.04765" damping="15" />
+                  <joint name="fl_joint7" pos="0 0 0" axis="0 1 0" type="slide" limited="true" range="0 0.04765" damping="100" />
                   <geom type="mesh" density="1.1" rgba="0.898039 0.917647 0.929412 1" mesh="link7"/>
                 </body>
                 <body name="fl_link8" pos="0.073574 -0.024629 0">
                   <inertial pos="-0.000327644 0.00482005 0.000752973" quat="0.5 0.5 0.5 0.5" mass="0.0484017" diaginertia="2e-05 2e-05 1e-05"/>
-                  <joint name="fl_joint8" pos="0 0 0" axis="0 -1 0" type="slide" limited="true" range="0 0.04765" damping="15" />
+                  <joint name="fl_joint8" pos="0 0 0" axis="0 -1 0" type="slide" limited="true" range="0 0.04765" damping="100" />
                   <geom type="mesh" density="1.1" rgba="0.898039 0.917647 0.929412 1" mesh="link8"/>
                 </body>
               </body>
@@ -77,32 +78,34 @@
       <geom type="mesh" density="2.83" rgba="0.752941 0.752941 0.752941 1" mesh="link1" />
       <body name="fr_link2" pos="0.02 0 0.0402">
         <inertial pos="-0.132382 0.00220381 0.00011179" quat="0 0.706195 0 0.708017" mass="1.07333" diaginertia="0.0160201 0.01596 0.000499897"/>
-        <joint name="fr_joint2" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="200"/>
+        <joint name="fr_joint2" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="100"/>
         <geom type="mesh" density="2.83" rgba="0.752941 0.752941 0.752941 1" mesh="link2"/>
         <body name="fr_link3" pos="-0.264 0 0" quat="-3.67321e-06 -1 0 0">
           <inertial pos="0.187203 -0.000305676 -0.0514833" quat="0.269626 0.618013 0.251786 0.694238" mass="0.499405" diaginertia="0.00388848 0.00385541 0.000286113"/>
-          <joint name="fr_joint3" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="100" />
+          <joint name="fr_joint3" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="20" />
           <geom type="mesh" density="2.83" rgba="0.752941 0.752941 0.752941 1" mesh="link3"/>
           <body name="fr_link4" pos="0.245 0 -0.056">
             <inertial pos="0.0388885 0.00295169 -0.0353283" quat="0.913916 -0.0752199 0.315785 -0.243679" mass="0.0809713" diaginertia="0.000184798 0.000152076 5.31251e-05"/>
-            <joint name="fr_joint4" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="1" />
+            <joint name="fr_joint4" pos="0 0 0" axis="0 1 0" limited="true" range="-10 10" damping="5" />
             <geom type="mesh" density="2.83" rgba="0.898039 0.917647 0.929412 1" mesh="link4"/>
             <body name="fr_link5" pos="0.06575 -0.001 -0.0825">
               <inertial pos="0.00289957 3.15827e-05 0.0526189" quat="0.998829 0 -0.0483866 0" mass="0.602357" diaginertia="0.000724856 0.00069 0.000205144"/>
               <joint name="fr_joint5" pos="0 0 0" axis="0 0 1" limited="true" range="-10 10" damping="2" />
               <geom type="mesh" density="2.83" rgba="0.752941 0.752941 0.752941 1" mesh="link5"/>
               <body name="fr_link6" pos="0.02845 0 0.0825" quat="-3.67321e-06 -1 0 0">
+                <geom type="mesh" pos="0.0275 0 0.0585" euler="0 1.74 1.57" density="2.83" rgba="0.898039 0.917647 0.929412 1" mesh="dabai"/>
+                <camera name="fr_dabai" pos="0.0275 0 0.0585" euler="0 -1.4 -1.57" fovy="41" />
                 <inertial pos="0.0471798 0.00010297 -0.000138511" quat="0.495436 0.504523 -0.504523 0.495436" mass="0.462245" diaginertia="0.000910182 0.00068 0.000359818"/>
                 <joint name="fr_joint6" pos="0 0 0" axis="1 0 0" limited="true" range="-10 10" damping="0.1"/>
                 <geom type="mesh" density="2.83" rgba="0.898039 0.917647 0.929412 1" mesh="link6"/>
                 <body name="fr_link7" pos="0.073574 0.024629 0">
                   <inertial pos="-0.000327643 -0.00482005 -0.00167541" quat="0.5 0.5 0.5 0.5" mass="0.0484017" diaginertia="2e-05 2e-05 1e-05"/>
-                  <joint name="fr_joint7" pos="0 0 0" axis="0 1 0" type="slide" limited="true" range="0 0.04765" damping="15" />
+                  <joint name="fr_joint7" pos="0 0 0" axis="0 1 0" type="slide" limited="true" range="0 0.04765" damping="100" />
                   <geom type="mesh" density="1.1" rgba="0.898039 0.917647 0.929412 1" mesh="link7"/>
                 </body>
                 <body name="fr_link8" pos="0.073574 -0.024629 0">
                   <inertial pos="-0.000327644 0.00482005 0.000752973" quat="0.5 0.5 0.5 0.5" mass="0.0484017" diaginertia="2e-05 2e-05 1e-05"/>
-                  <joint name="fr_joint8" pos="0 0 0" axis="0 -1 0" type="slide" limited="true" range="0 0.04765" damping="15" />
+                  <joint name="fr_joint8" pos="0 0 0" axis="0 -1 0" type="slide" limited="true" range="0 0.04765" damping="100" />
                   <geom type="mesh" density="1.1" rgba="0.898039 0.917647 0.929412 1" mesh="link8"/>
                 </body>
               </body>
@@ -116,22 +119,22 @@
 <actuator>
     
     <position name="fl_joint1" ctrllimited="true" ctrlrange="-3.14158 3.14158" joint="fl_joint1" kp="10000"  user="1" forcelimited="true" forcerange="-50000 50000"/>
-    <position name="fl_joint2" ctrllimited="true" ctrlrange="0 3.14158" joint="fl_joint2" kp="10000"  user="1" forcelimited="true" forcerange="-50000 50000"/>
-    <position name="fl_joint3" ctrllimited="true" ctrlrange="0 3.14158" joint="fl_joint3" kp="10000"  user="1" forcelimited="true" forcerange="-1000 1000"/>
-    <position name="fl_joint4" ctrllimited="true" ctrlrange="-2 1.67" joint="fl_joint4" kp="13"  user="1" forcelimited="true" forcerange="-50 50"/>
+    <position name="fl_joint2" ctrllimited="true" ctrlrange="0 3.14158" joint="fl_joint2" kp="2000"  user="1" forcelimited="true" forcerange="-20000 20000"/>
+    <position name="fl_joint3" ctrllimited="true" ctrlrange="0 3.14158" joint="fl_joint3" kp="500"  user="1" forcelimited="true" forcerange="-1000 1000"/>
+    <position name="fl_joint4" ctrllimited="true" ctrlrange="-2 1.67" joint="fl_joint4" kp="50"  user="1" forcelimited="true" forcerange="-70 70"/>
     <position name="fl_joint5" ctrllimited="true" ctrlrange="-1.5708 1.5708" joint="fl_joint5" kp="20"  user="1" forcelimited="true" forcerange="-50 50"/>
     <position name="fl_joint6" ctrllimited="true" ctrlrange="-3.14158 3.14158" joint="fl_joint6" kp="5"  user="1" forcelimited="true" forcerange="-6 6"/>
-    <position name="fl_joint7" ctrllimited="true" ctrlrange="0 0.0475" joint="fl_joint7" kp="2000"  user="1" forcelimited="true" forcerange="-100 100"/>
-    <position name="fl_joint8" ctrllimited="true" ctrlrange="0 0.0475" joint="fl_joint8" kp="2000"  user="1" forcelimited="true" forcerange="-100 100"/>
+    <position name="fl_joint7" ctrllimited="true" ctrlrange="0 0.0475" joint="fl_joint7" kp="10000"  user="1" forcelimited="true" forcerange="-100 100"/>
+    <position name="fl_joint8" ctrllimited="true" ctrlrange="0 0.0475" joint="fl_joint8" kp="10000"  user="1" forcelimited="true" forcerange="-100 100"/>
 
     <position name="fr_joint1" ctrllimited="true" ctrlrange="-3.14158 3.14158" joint="fr_joint1" kp="10000"  user="1" forcelimited="true" forcerange="-50000 50000"/>
     <position name="fr_joint2" ctrllimited="true" ctrlrange="0 3.14158" joint="fr_joint2" kp="10000"  user="1" forcelimited="true" forcerange="-50000 50000"/>
-    <position name="fr_joint3" ctrllimited="true" ctrlrange="0 3.14158" joint="fr_joint3" kp="10000"  user="1" forcelimited="true" forcerange="-1000 1000"/>
-    <position name="fr_joint4" ctrllimited="true" ctrlrange="-2 1.67" joint="fr_joint4" kp="13"  user="1" forcelimited="true" forcerange="-50 50"/>
+    <position name="fr_joint3" ctrllimited="true" ctrlrange="0 3.14158" joint="fr_joint3" kp="500"  user="1" forcelimited="true" forcerange="-1000 1000"/>
+    <position name="fr_joint4" ctrllimited="true" ctrlrange="-2 1.67" joint="fr_joint4" kp="50"  user="1" forcelimited="true" forcerange="-70 70"/>
     <position name="fr_joint5" ctrllimited="true" ctrlrange="-1.5708 1.5708" joint="fr_joint5" kp="20"  user="1" forcelimited="true" forcerange="-50 50"/>
     <position name="fr_joint6" ctrllimited="true" ctrlrange="-3.14158 3.14158" joint="fr_joint6" kp="5"  user="1" forcelimited="true" forcerange="-6 6"/>
-    <position name="fr_joint7" ctrllimited="true" ctrlrange="0 0.0475" joint="fr_joint7" kp="2000"  user="1" forcelimited="true" forcerange="-100 100"/>
-    <position name="fr_joint8" ctrllimited="true" ctrlrange="0 0.0475" joint="fr_joint8" kp="2000"  user="1" forcelimited="true" forcerange="-100 100"/>
+    <position name="fr_joint7" ctrllimited="true" ctrlrange="0 0.0475" joint="fr_joint7" kp="10000"  user="1" forcelimited="true" forcerange="-100 100"/>
+    <position name="fr_joint8" ctrllimited="true" ctrlrange="0 0.0475" joint="fr_joint8" kp="10000"  user="1" forcelimited="true" forcerange="-100 100"/>
 </actuator>
 
 </mujoco>

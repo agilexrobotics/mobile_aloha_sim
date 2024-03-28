@@ -74,10 +74,12 @@ aloha_mujoco
 
 ```
 
-其中,`meshes_mujoco` 主要存储stl文件和`mujoco`的描述`xml`文件,要打开`aloha_v1.xml`文件:
+其中,`meshes_mujoco` 主要存储stl文件和`mujoco`的描述`xml`文件
+
+使用`mujoco`打开`aloha_v1.xml`文件:
 
 ```bash
-~/.mujoco/mujoco210/bin/simulate /你的文件夹路径/aloha_mujoco/aloha/meshes_mujoco/aloha_v1.xml
+~/.mujoco/mujoco210/bin/simulate /<your path>/aloha_mujoco/aloha/meshes_mujoco/aloha_v1.xml
 ```
 
 不出意外就会显示如下界面
@@ -99,6 +101,10 @@ aloha_mujoco
 
 ![ ](./assert/picture/aloha_joint_ctrl.png)
 
+左侧栏下滑看到`Randering`选项卡,点开后下滑,将`Model Elements`选项卡内的`Camera`选项点亮后,可以看到三个相机的视角位置:
+
+![ ](./assert/picture/aloha_camera_view.png)
+
 ### 使用 `python` 文件打开 `aloha` 仿真环境
 
 #### 执行test
@@ -111,7 +117,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin
 export LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libGLEW.so:/usr/lib/x86_64-linux-gnu/libGL.so
 ```
 
-运行文件夹中的`aloha_mujoco/aloha/scripts/aloha_ctrl_test.py`文件,会弹出五个窗口,但是其中两个是没有画面的,因为相机画面通过opencv另建窗口发出来了
+运行文件夹中的`aloha_mujoco/aloha/scripts/aloha_ctrl_test.py`文件,会弹出七个窗口,但是其中三个是没有画面的,因为相机画面通过opencv另建窗口发出来了
 
 如下:
 ![ ](./assert/picture/aloha_python_ctrl_test.png)
@@ -124,4 +130,6 @@ export LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libGLEW.so:/usr/lib/x86_
 
 其次要运行主机械臂节点,两个机械臂节点都要打开,检查`/master/joint_left` 和 `/master/joint_right` 数据是否正常
 
-接着运行 `aloha_ctrl.py` 文件,若运行没有问题,同上面一样,会弹出五个窗口,就可以运动主机械臂来控制仿真环境里面的机械臂了
+接着运行 `aloha_ctrl.py` 文件,若运行没有问题,同上面一样,会弹出七个窗口,就可以运动主机械臂来控制仿真环境里面的机械臂了
+
+![ ](./assert/picture/aloha_follow_amster_joint.png)
