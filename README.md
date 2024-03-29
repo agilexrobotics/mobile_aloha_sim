@@ -103,3 +103,15 @@ roslaunch arx5_moveit_config demo.launch
 ```
 
 启动后和gazebo仿真里的rviz界面一样，按照上文操作即可。
+
+
+
+## isaac sim仿真
+
+本仓库提供了用于isaac sim仿真导入的urdf:
+
+aloha_description/arx5_description/urdf/arx5_description_isaac.urdf
+
+导入isaac sim后效果如下：
+
+![issac_sim](./doc/aloha_isaac.png)
