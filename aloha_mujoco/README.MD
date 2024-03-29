@@ -120,7 +120,7 @@ export LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libGLEW.so:/usr/lib/x86_
 运行文件夹中的`aloha_mujoco/aloha/scripts/aloha_ctrl_test.py`文件,会弹出七个窗口,但是其中三个是没有画面的,因为相机画面通过opencv另建窗口发出来了
 
 如下:
-![ ](./assert/picture/aloha_python_ctrl_test.png)
+![ ](./assert/picture/aloha_python_ctrl_test.gif)
 
 机械臂会每隔2s运动一下,可以看到相机画面也跟着变化
 
