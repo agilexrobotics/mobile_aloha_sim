@@ -110,7 +110,7 @@ roslaunch arx5_moveit_config demo.launch
 
 本仓库提供了用于isaac sim仿真导入的urdf:
 
-aloha_description/arx5_description/urdf/arx5_description_isaac.urdf
+aloha_isaac_sim/urdf/arx5_description_isaac.urdf
 
 导入isaac sim后效果如下：
 
