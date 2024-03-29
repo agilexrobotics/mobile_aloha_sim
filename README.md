@@ -108,9 +108,13 @@ roslaunch arx5_moveit_config demo.launch
 
 ## isaac sim仿真
 
-本仓库提供了用于isaac sim仿真导入的urdf:
+### isaac sim 下载
 
-aloha_isaac_sim/urdf/arx5_description_isaac.urdf
+https://developer.nvidia.com/isaac-sim  点击下载omniverse，然后在omniverse_launcher的“交易所/exchange”中搜索isaac sim，下载isaac sim
+
+本仓库提供了用于isaac sim仿真导入的urdf : aloha_isaac_sim/urdf/arx5_description_isaac.urdf
+
+在omniverse_launcher中启动isaac sim，然后上方工具栏isaac utils->workflows->URDF Importer->在弹出的窗口中找到下方的Import->Input File选择urdf路径->点击Import
 
 导入isaac sim后效果如下：
 
