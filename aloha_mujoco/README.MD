@@ -121,8 +121,6 @@ export LD_PRELOAD=$LD_PRELOAD:/usr/lib/x86_64-linux-gnu/libGLEW.so:/usr/lib/x86_
 
 如下:
 
-![ ](./assert/picture/aloha_python_ctrl_test.png)
-
 ![ ](./assert/picture/aloha_python_ctrl_test.gif)
 
 机械臂会每隔2s运动一下,可以看到相机画面也跟着变化
