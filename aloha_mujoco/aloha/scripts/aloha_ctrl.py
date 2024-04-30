@@ -11,6 +11,8 @@ import rospy
 import numpy as np
 import cv2
 from sensor_msgs.msg import JointState
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge
 import _thread
 from threading import Thread
 
@@ -115,9 +117,16 @@ class JointStatesSubscriber:
         self.joint_positions_fr = {}
         # 初始化订阅者
         self.subscriber_bl = rospy.Subscriber("/master/joint_left", JointState, self.callback_bl)
-        self.subscriber_br = rospy.Subscriber("/master/joint_reft", JointState, self.callback_br)
+        self.subscriber_br = rospy.Subscriber("/master/joint_right", JointState, self.callback_br)
+        self.bridge = CvBridge()
+        self.image_pub_f = rospy.Publisher('/camera_f/color/image_raw', Image, queue_size=10)
+        self.image_pub_l = rospy.Publisher('/camera_l/color/image_raw', Image, queue_size=10)
+        self.image_pub_r = rospy.Publisher('/camera_r/color/image_raw', Image, queue_size=10)
         # 初始化仿真环境
         self.mujocoCtrl = Mujoco_Model()
+        # daemon_thread = Thread(target=self.ImageViewThread)
+        # daemon_thread.daemon = True  # 将线程设置为守护线程
+        # daemon_thread.start()
     
     def callback_bl(self, data):
         for i in range(len(data.name)):
@@ -130,41 +139,21 @@ class JointStatesSubscriber:
     def callback_br(self, data):
         for i in range(len(data.name)):
             joint_name = data.name[i]
+            # if(joint_name == "joint6"):
+            #     print(data.position[i])
             if joint_name == "joint0" or joint_name == "joint1" or joint_name == "joint2" \
                     or joint_name == "joint3" or joint_name == "joint4" or joint_name == "joint5" \
                     or joint_name == "joint6" or joint_name == "joint7":
                 self.joint_positions_fr[joint_name] = data.position[i]
 
     def get_joint_position(self, arm_joint:dict, joint_name):
-        if joint_name in self.arm_joint:
-            return self.arm_joint[joint_name]
+        if joint_name in arm_joint:
+            return arm_joint[joint_name]
         else:
             rospy.logwarn("Joint position for {} not found!".format(joint_name))
             return None
-
-    def MujocoCtrl(self):
-
-        while not glfw.window_should_close(self.mujocoCtrl.viewer.window):
-            if(self.joint_positions_fl != {}):
-                # print(self.joint_positions_fl)
-                self.mujocoCtrl.pos_ctrl("fl_joint1",self.get_joint_position(self.joint_positions_fl, "joint0"))
-                self.mujocoCtrl.pos_ctrl("fl_joint2",self.get_joint_position(self.joint_positions_fl, "joint1"))
-                self.mujocoCtrl.pos_ctrl("fl_joint3",self.get_joint_position(self.joint_positions_fl, "joint2"))
-                self.mujocoCtrl.pos_ctrl("fl_joint4",self.get_joint_position(self.joint_positions_fl, "joint3"))
-                self.mujocoCtrl.pos_ctrl("fl_joint5",self.get_joint_position(self.joint_positions_fl, "joint4"))
-                self.mujocoCtrl.pos_ctrl("fl_joint6",self.get_joint_position(self.joint_positions_fl, "joint5"))
-                self.mujocoCtrl.pos_ctrl("fl_joint7",self.get_joint_position(self.joint_positions_fl, "joint6")/90)
-                self.mujocoCtrl.pos_ctrl("fl_joint8",self.get_joint_position(self.joint_positions_fl, "joint6")/90)
-            if(self.joint_positions_fr != {}):
-                # print(self.joint_positions_fr)
-                self.mujocoCtrl.pos_ctrl("fl_joint1",self.get_joint_position(self.joint_positions_fr, "joint0"))
-                self.mujocoCtrl.pos_ctrl("fl_joint2",self.get_joint_position(self.joint_positions_fr, "joint1"))
-                self.mujocoCtrl.pos_ctrl("fl_joint3",self.get_joint_position(self.joint_positions_fr, "joint2"))
-                self.mujocoCtrl.pos_ctrl("fl_joint4",self.get_joint_position(self.joint_positions_fr, "joint3"))
-                self.mujocoCtrl.pos_ctrl("fl_joint5",self.get_joint_position(self.joint_positions_fr, "joint4"))
-                self.mujocoCtrl.pos_ctrl("fl_joint6",self.get_joint_position(self.joint_positions_fr, "joint5"))
-                self.mujocoCtrl.pos_ctrl("fl_joint7",self.get_joint_position(self.joint_positions_fr, "joint6")/90)
-                self.mujocoCtrl.pos_ctrl("fl_joint8",self.get_joint_position(self.joint_positions_fr, "joint6")/90)
+    
+    def ImageView(self):
             # 获取窗口屏幕图像
             self.mujocoCtrl.offscreen_f.render(width=640, height=480, camera_id=0)
             data_f = self.mujocoCtrl.offscreen_f.read_pixels(width=640, height=480, depth=False)
@@ -181,6 +170,67 @@ class JointStatesSubscriber:
             cv2.imshow("Camera Image_l", image_l)
             cv2.imshow("Camera Image_r", image_r)
             cv2.waitKey(1)
+            # 将OpenCV图像转换为ROS图像消息
+            ros_image_f = self.bridge.cv2_to_imgmsg(image_f, "bgr8")
+            ros_image_l = self.bridge.cv2_to_imgmsg(image_l, "bgr8")
+            ros_image_r = self.bridge.cv2_to_imgmsg(image_r, "bgr8")
+            # 发布图像消息
+            self.image_pub_f.publish(ros_image_f)
+            self.image_pub_l.publish(ros_image_l)
+            self.image_pub_r.publish(ros_image_r)
+            # time.sleep(0.02)
+    # def ImageViewThread(self):
+    #     while True:
+    #         self.ImageView()
+    #         time.sleep(0.02)
+
+    def MujocoCtrl(self):
+        while not glfw.window_should_close(self.mujocoCtrl.viewer.window):
+            if(self.joint_positions_fl != {}):
+                # print(self.joint_positions_fl)
+                self.mujocoCtrl.pos_ctrl("fl_joint1",self.get_joint_position(self.joint_positions_fl, "joint0"))
+                self.mujocoCtrl.pos_ctrl("fl_joint2",self.get_joint_position(self.joint_positions_fl, "joint1"))
+                self.mujocoCtrl.pos_ctrl("fl_joint3",self.get_joint_position(self.joint_positions_fl, "joint2"))
+                self.mujocoCtrl.pos_ctrl("fl_joint4",self.get_joint_position(self.joint_positions_fl, "joint3"))
+                self.mujocoCtrl.pos_ctrl("fl_joint5",self.get_joint_position(self.joint_positions_fl, "joint4"))
+                self.mujocoCtrl.pos_ctrl("fl_joint6",self.get_joint_position(self.joint_positions_fl, "joint5"))
+                self.mujocoCtrl.pos_ctrl("fl_joint7",self.get_joint_position(self.joint_positions_fl, "joint6")/90)
+                self.mujocoCtrl.pos_ctrl("fl_joint8",self.get_joint_position(self.joint_positions_fl, "joint6")/90)
+            if(self.joint_positions_fr != {}):
+                # print(self.joint_positions_fr)
+                self.mujocoCtrl.pos_ctrl("fr_joint1",self.get_joint_position(self.joint_positions_fr, "joint0"))
+                self.mujocoCtrl.pos_ctrl("fr_joint2",self.get_joint_position(self.joint_positions_fr, "joint1"))
+                self.mujocoCtrl.pos_ctrl("fr_joint3",self.get_joint_position(self.joint_positions_fr, "joint2"))
+                self.mujocoCtrl.pos_ctrl("fr_joint4",self.get_joint_position(self.joint_positions_fr, "joint3"))
+                self.mujocoCtrl.pos_ctrl("fr_joint5",self.get_joint_position(self.joint_positions_fr, "joint4"))
+                self.mujocoCtrl.pos_ctrl("fr_joint6",self.get_joint_position(self.joint_positions_fr, "joint5"))
+                self.mujocoCtrl.pos_ctrl("fr_joint7",self.get_joint_position(self.joint_positions_fr, "joint6")/90)
+                self.mujocoCtrl.pos_ctrl("fr_joint8",self.get_joint_position(self.joint_positions_fr, "joint6")/90)
+            self.ImageView()
+            # # 获取窗口屏幕图像
+            # self.mujocoCtrl.offscreen_f.render(width=640, height=480, camera_id=0)
+            # data_f = self.mujocoCtrl.offscreen_f.read_pixels(width=640, height=480, depth=False)
+            # self.mujocoCtrl.offscreen_l.render(width=640, height=480, camera_id=1)
+            # data_l = self.mujocoCtrl.offscreen_l.read_pixels(width=640, height=480, depth=False)
+            # self.mujocoCtrl.offscreen_r.render(width=640, height=480, camera_id=2)
+            # data_r = self.mujocoCtrl.offscreen_r.read_pixels(width=640, height=480, depth=False)
+            # # 从渲染结果中提取相机图像
+            # image_f = np.flipud(data_f)
+            # image_l = np.flipud(data_l)
+            # image_r = np.flipud(data_r)
+            ## 显示相机图像
+            # cv2.imshow("Camera Image_f", image_f)
+            # cv2.imshow("Camera Image_l", image_l)
+            # cv2.imshow("Camera Image_r", image_r)
+            # cv2.waitKey(1)
+            ## 将OpenCV图像转换为ROS图像消息
+            # ros_image_f = self.bridge.cv2_to_imgmsg(image_f, "bgr8")
+            # ros_image_l = self.bridge.cv2_to_imgmsg(image_l, "bgr8")
+            # ros_image_r = self.bridge.cv2_to_imgmsg(image_r, "bgr8")
+            ## 发布图像消息
+            # self.image_pub_f.publish(ros_image_f)
+            # self.image_pub_l.publish(ros_image_l)
+            # self.image_pub_r.publish(ros_image_r)
             
             self.mujocoCtrl.sim.step()
             self.mujocoCtrl.viewer.render()
