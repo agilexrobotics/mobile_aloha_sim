@@ -7,11 +7,22 @@
 
     <xacro:include filename="$(find tracer_description)/urdf/tracer_v1.xacro"/>
     <xacro:include filename="$(find livox_laser_simulation)/urdf/livox_mid360.xacro"/>
+    <xacro:include filename="$(find realsense_ros_gazebo)/xacro/depthcam.xacro"/>
 
     <link name="footprint">
     </link>
     <link name="robot::footprint">
     </link>
+    <xacro:realsense_d435 sensor_name="camera_l" parent_link="fl_link6" rate="10">
+        <origin rpy="0 0 0 " xyz="0.06 0 0.06"/>
+    </xacro:realsense_d435>
+    <xacro:realsense_d435 sensor_name="camera_r" parent_link="fr_link6" rate="10">
+        <origin rpy="0 0 0 " xyz="0.06 0 0.06"/>
+    </xacro:realsense_d435>
+    <xacro:realsense_d435 sensor_name="camera_f" parent_link="footprint" rate="10">
+        <origin rpy="0 0 0 " xyz="0.17 -0.01 0.84"/>
+    </xacro:realsense_d435>
+
     <joint name="box_joint" type="fixed">
         <origin xyz="0 0 0.15" rpy="0 0 0" />
         <parent link="footprint" />
