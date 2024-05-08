@@ -18,7 +18,7 @@
   </xacro:macro>
   <xacro:macro name="Livox_Mid_gazebo_sensor" params="visualize:=True update_rate:=10 resolution:=0.002 noise_mean:=0.0 noise_stddev:=0.01 name:=livox">
     <gazebo reference="${name}">
-      <sensor type="ray" name="laser_${name}">
+      <sensor type="ray" name="${name}">
         <pose>0 0 0 0 0 0</pose>
         <visualize>${visualize}</visualize>
         <update_rate>${update_rate}</update_rate>
@@ -65,17 +65,19 @@
     <link name="${name}_base">
       <xacro:null_inertial/>
       <visual> 
-        <origin xyz="0.00 0 0.0" rpy="0 0 0"/>
+        <origin xyz="0.00 0 0.0" rpy="1.57 0 3.14"/>
         <geometry>
-          <mesh filename="package://livox_laser_simulation/meshes/livox_mid40.dae">
+          <mesh filename="package://livox_laser_simulation/meshes/livox_mid360.dae" scale="0.001 0.001 0.001">
           </mesh>
         </geometry>
       </visual>
 
       <collision>
-		  <origin xyz="0 0 0" rpy="0 0 0" /> <geometry> <mesh 
-		  filename="package://livox_laser_simulation/meshes/livox_mid40.dae"> 
-		  </mesh> </geometry>
+		  <origin xyz="0 0 0" rpy="1.57 0 3.14" /> 
+      <geometry> 
+        <mesh filename="package://livox_laser_simulation/meshes/livox_mid360.dae" scale="0.001 0.001 0.001"> 
+        </mesh> 
+      </geometry>
       </collision>
     </link>
     <link name="${name}">
@@ -83,13 +85,14 @@
     </link>
 
     <joint name="${name}_to_${name}_base_joint" type="fixed">
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.03"/>
       <parent link="${name}_base"/>
       <child link="${name}"/>
-      <origin rpy="0 0 0" xyz="0.0 1.0 0.2"/>
+      <axis xyz="0 0 0" />
     </joint>
     <xacro:Livox_Mid_gazebo_sensor name="${name}" visualize="${visualize}"/>
   </xacro:macro>
     <xacro:Livox_Mid40 name="livox"/>
-  <xacro:include filename="$(find livox_laser_simulation)/urdf/standardrobots_oasis300.xacro"/>
-  <xacro:link_oasis name="oasis"/>
+  <!-- <xacro:include filename="$(find livox_laser_simulation)/urdf/standardrobots_oasis300.xacro"/>
+  <xacro:link_oasis name="oasis"/> -->
 </robot>

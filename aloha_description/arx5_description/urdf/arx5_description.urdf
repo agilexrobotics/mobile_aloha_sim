@@ -6,14 +6,28 @@
     <!-- <link name="footprint"/> -->
 
     <xacro:include filename="$(find tracer_description)/urdf/tracer_v1.xacro"/>
+    <xacro:include filename="$(find livox_laser_simulation)/urdf/livox_mid360.xacro"/>
 
     <link name="footprint">
     </link>
-
+    <link name="robot::footprint">
+    </link>
     <joint name="box_joint" type="fixed">
         <origin xyz="0 0 0.15" rpy="0 0 0" />
         <parent link="footprint" />
         <child link="base_link" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <joint name="livox_joint" type="fixed">
+        <origin xyz="0.23 0 0.19" rpy="0 0 0" />
+        <parent link="footprint" />
+        <child link="livox_base" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <joint name="robot_footprint_joint" type="fixed">
+        <origin xyz="0.18 0 0.29" rpy="0 0 0" />
+        <parent link="footprint" />
+        <child link="robot::footprint" />
         <axis xyz="0 0 0" />
     </joint>
     <link name="box1_Link">
