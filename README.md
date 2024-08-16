@@ -27,6 +27,12 @@ catkin_make
 ## 文件目录
 
 ```
+├── aloha_sapien_sim
+│   ├── mesh
+│   ├── srdf
+│   ├── urdf
+│   ├── test.py
+│   ├── README.md
 ├── aloha_description
 │   ├── aloha
 │   ├── arx5_description
@@ -55,6 +61,7 @@ catkin_make
 ```
 
 其中，aloha_mujoco是mujoco仿真下的实现，具体请参考aloha_mujoco文件夹中的[README](./aloha_mujoco/README.MD)
+其中，aloha_mujoco是mujoco仿真下的实现，具体请参考aloha_mujoco文件夹中的[README](./aloha_sapien_sim/README.MD)
 
 ## 启动仿真
 
@@ -119,3 +126,12 @@ https://developer.nvidia.com/isaac-sim  点击下载omniverse，然后在omniver
 导入isaac sim后效果如下：
 
 ![issac_sim](./doc/aloha_isaac.png)
+
+
+## sapien sim 仿真
+
+具体文档请参考[README](./aloha_sapien_sim/README.MD)
+
+导入sapien后效果图如下:
+
+![issac_sim](./doc/aloha_sapien.jpg)
