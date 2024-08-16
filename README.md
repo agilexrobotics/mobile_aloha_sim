@@ -130,7 +130,7 @@ https://developer.nvidia.com/isaac-sim  点击下载omniverse，然后在omniver
 
 ## sapien sim 仿真
 
-具体文档请参考[README](./aloha_sapien_sim/README.MD)
+具体文档请参考[README](./aloha_sapien_sim/README.md)
 
 导入sapien后效果图如下:
 

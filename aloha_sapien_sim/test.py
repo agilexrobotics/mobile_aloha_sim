@@ -174,7 +174,7 @@ def main():
     # 添加aloha机器人
     loader = scene.create_urdf_loader()
     loader.fix_root_link = True
-    robot = loader.load("./urdf/arx5_description_isaac.urdf")
+    robot = loader.load("./urdf/aloha_sapien_sim.urdf")
     robot.set_root_pose(sapien.Pose([0, -0.65, 0], [1, 0, 0, 1]))
     # 获取活动关节
     active_joints = robot.get_active_joints()
@@ -190,8 +190,8 @@ def main():
     # 初始化aloha机械臂的planner（左臂）
     robot_pose_in_world = [0,-0.65,0,1,0,0,1]
     planner = mplib.Planner(
-        urdf="./urdf/arx5_description_isaac.urdf",
-        srdf="./srdf/arx5_description_isaac.srdf",
+        urdf="./urdf/aloha_sapien_sim.urdf",
+        srdf="./srdf/aloha_sapien_sim.srdf",
         move_group="fl_link6",
     )
     planner.set_base_pose(robot_pose_in_world)

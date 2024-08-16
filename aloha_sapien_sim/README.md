@@ -19,26 +19,12 @@
 ### File Directory Description
 
 ```
-ARIO_Benchmark
-|── aloha_maniskill_sim
-|── doc
-|── envs
-│  ├── __init__.py
-│  ├── base_task.py
-│  ├── your_task.py
-|── models
-│  ├── /000_modelname/
-│  │  ├── collision.obj
-│  │  └── textured.mtl
-│  │  └── textured.obj
-│  │  └── material.png
-|── script
-|── seeds
-│  ├── task_success_seed.txt
-├── LICENSE.txt
+aloha_sapien_sim
+|── meshes
+|── srdf
+|── urdf
 ├── README.md
-├── main.py
-├── task_args.yml
+├── test.py
 ```
 
 
