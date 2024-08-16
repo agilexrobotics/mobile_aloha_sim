@@ -9,8 +9,8 @@
 
 - [File Directory Description](#file-directory-description)
 - [Installation](#installation)
+  - [env init](#env-init)
   - [Dependencies](#dependencies)
-  - [Build from Source](#build-from-source)
 - [Start](#start)
 
 - [Author](#author)
