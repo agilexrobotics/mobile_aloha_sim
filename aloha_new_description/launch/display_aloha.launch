@@ -1,0 +1,21 @@
+<launch>
+    <arg
+        name="model" />
+    <arg name="rviz_config" default="$(find aloha_new_description)/rviz/aloha.rviz" />
+    <param
+        name="robot_description"
+        textfile="$(find aloha_new_description)/urdf/aloha_new.urdf" />
+    <node
+        name="joint_state_publisher_gui"
+        pkg="joint_state_publisher_gui"
+        type="joint_state_publisher_gui" />
+    <node
+        name="robot_state_publisher"
+        pkg="robot_state_publisher"
+        type="robot_state_publisher" />
+    <node
+        name="rviz"
+        pkg="rviz"
+        type="rviz"
+        args="-d $(arg rviz_config)" />
+</launch>
