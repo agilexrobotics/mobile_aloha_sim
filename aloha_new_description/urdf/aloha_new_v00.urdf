@@ -352,25 +352,26 @@
     <!--***************************** front-left ****************************** -->
     <link name="fl_base_link">
         <inertial>
-            <origin xyz="-0.00973928490005032 1.83127089286699E-06 0.0410140167677137"
-                    rpy="0 0 0" />
-            <mass value="0.162352169522719" />
-            <inertia
-                ixx="0.000226592553127906"
-                ixy="-7.33974356968621E-08"
-                ixz="2.13221970218122E-06"
-                iyy="0.000269447877479622"
-                iyz="8.15167478682635E-09"
-                izz="0.000222318286704" />
+        <origin
+            xyz="-0.00979274765955341 1.82905827587138E-06 0.0410100126360189"
+            rpy="0 0 0" />
+        <mass value="0.162548567403693" />
+        <inertia
+            ixx="0.000226596924525071"
+            ixy="-7.33972270153965E-08"
+            ixz="2.13249977802622E-06"
+            iyy="0.000269444772561524"
+            iyz="8.15169009611054E-09"
+            izz="0.000222318258878636" />
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="1.5708 0 -1.5708" />
-            <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
-            </geometry>
-            <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1" />
-            </material>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
+        </geometry>
+        <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -389,20 +390,19 @@
     <link name="fl_link1">
         <inertial>
         <origin
-            xyz="0.00131676031926984 0.000310288842009266 -0.00922874512303448"
+            xyz="0.00131676031927024 0.000310288842008612 -0.00922874512303437"
             rpy="0 0 0" />
-        <mass
-            value="0.0978679932242826" />
+        <mass value="0.0978679932242825" />
         <inertia
             ixx="7.76684558296782E-05"
-            ixy="1.09084650459928E-07"
+            ixy="1.09084650459924E-07"
             ixz="-1.9748053243241E-06"
-            iyy="9.24967780161546E-05"
-            iyz="9.91284646834577E-07"
-            izz="8.24589062407806E-05" />
+            iyy="9.24967780161547E-05"
+            iyz="9.91284646834582E-07"
+            izz="8.24589062407807E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.5708 0 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link1.dae" />
         </geometry>
@@ -427,19 +427,20 @@
 
     <link name="fl_link2">
         <inertial>
-        <origin xyz="0.147615889509426 -0.0174260242231321 0.00175953839968308"
-                rpy="0 0 0" />
-        <mass value="0.289570165726093" />
+        <origin
+            xyz="0.148793602378802 -0.00242026983944119 0.00175154638467948"
+            rpy="0 0 0" />
+        <mass value="0.290888938633388" />
         <inertia
-            ixx="0.000150112030598521"
-            ixy="8.58964962060178E-05"
-            ixz="-1.07408295088503E-06"
-            iyy="0.0017258471872165"
-            iyz="-9.9382405210397E-07"
-            izz="0.00177445407836346" />
+            ixx="0.000148959640166183"
+            ixy="-7.37750384371657E-05"
+            ixz="-9.68688405196236E-07"
+            iyy="0.00172800946632652"
+            iyz="-1.09692225564224E-06"
+            izz="0.0017754628344594" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="0 1.5708 -0.0873" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link2.dae" />
         </geometry>
@@ -448,15 +449,14 @@
         </material>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link2.STL" />
-        </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://aloha_new_description/meshes/link2.STL" />
+            </geometry>
         </collision>
     </link>
     <joint name="fl_joint2" type="revolute">
-        <!-- <origin xyz="0 0 0" rpy="1.5708 -0.10095 -1.5708" /> -->
-        <origin xyz="0 0 0" rpy="1.5708 -0.135857 -1.5708" />
+        <origin xyz="0 0 0" rpy="1.5708 -0.034907 -1.5708" />
         <parent link="fl_link1" />
         <child link="fl_link2" />
         <axis xyz="0 0 1" />
@@ -466,20 +466,19 @@
     <link name="fl_link3">
         <inertial>
         <origin
-            xyz="0.0156727369652958 0.104466495690107 0.000508479337323991"
+            xyz="-0.0996835215213704 0.0349477226691318 0.000508025815507312"
             rpy="0 0 0" />
-        <mass
-            value="0.290583612813414" />
+        <mass value="0.290847697793211" />
         <inertia
-            ixx="0.00022168673797825"
-            ixy="-7.57408494058923E-06"
-            ixz="-6.36995590559901E-07"
-            iyy="0.000100859208616699"
-            iyz="-8.16231100823835E-07"
-            izz="0.00024183974052656" />
+            ixx="0.000107879011637167"
+            ixy="2.92669521203626E-05"
+            ixz="6.825922326238E-07"
+            iyy="0.000214751671792086"
+            iyz="-7.78469047878196E-07"
+            izz="0.000241923439340319" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.4835 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link3.dae" />
         </geometry>
@@ -495,8 +494,7 @@
         </collision>
     </link>
     <joint name="fl_joint3" type="revolute">
-        <!-- <origin xyz="0.28503 0 0" rpy="0 0 1.3826" /> -->
-        <origin xyz="0.28503 0 0" rpy="0 0 1.347693" />
+        <origin xyz="0.28358 0.028726 0" rpy="0 0 0.06604341" />
         <parent link="fl_link2" />
         <child link="fl_link3" />
         <axis xyz="0 0 1" />
@@ -506,19 +504,19 @@
     <link name="fl_link4">
         <inertial>
         <origin
-            xyz="0.000276466145386484 -0.00102804142065371 -0.00472831185573786"
+            xyz="0.000276464622387979 -0.00102803669324875 -0.00472830700561663"
             rpy="0 0 0" />
-        <mass value="0.12708738799602" />
+        <mass value="0.127087348341362" />
         <inertia
-            ixx="3.82011721226907E-05"
-            ixy="-4.92402818734863E-08"
-            ixz="4.89562755452226E-08"
-            iyy="4.8704868787511E-05"
-            iyz="6.70807206169121E-08"
-            izz="4.10592238452447E-05" />
+            ixx="3.82011730423416E-05"
+            ixy="-4.92358350897513E-08"
+            ixz="4.89589432973119E-08"
+            iyy="4.87048555222578E-05"
+            iyz="6.70802942500512E-08"
+            izz="4.10592077565559E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.48 0 1.5708" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link4.dae" />
         </geometry>
@@ -534,31 +532,29 @@
         </collision>
     </link>
     <joint name="fl_joint4" type="revolute">
-        <origin
-        xyz="0.021984 0.25075 0"
-        rpy="-1.5708 0 0" />
+        <origin xyz="-0.24221 0.068514 0" rpy="-1.5708 0 1.3826" />
         <parent link="fl_link3" />
         <child link="fl_link4" />
-        <axis xyz="0 0 -1" />
+        <axis xyz="0 0 1" />
         <limit lower="-1.832" upper="1.832" effort="100" velocity="3" />
     </joint>
 
     <link name="fl_link5">
         <inertial>
         <origin
-            xyz="8.82261259079475E-05 0.0566829084341963 -0.00196119077435715"
+            xyz="8.82262433516967E-05 0.0566829014808256 -0.00196119720482461"
             rpy="0 0 0" />
-        <mass value="0.144711209371806" />
+        <mass value="0.144711242639457" />
         <inertia
-            ixx="4.39644269159504E-05"
-            ixy="-3.5921484085666E-08"
-            ixz="-1.89785003755334E-08"
-            iyy="5.63173857792914E-05"
-            iyz="-2.1540762372509E-07"
-            izz="4.88713595021133E-05" />
+            ixx="4.39644313662493E-05"
+            ixy="-3.59259686444846E-08"
+            ixz="-1.89747741386183E-08"
+            iyy="5.63173920951307E-05"
+            iyz="-2.1540716689785E-07"
+            izz="4.88713664675268E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.4835 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link5.dae" />
         </geometry>
@@ -584,19 +580,19 @@
     <link name="fl_link6">
         <inertial>
         <origin
-            xyz="0.000799734029960423 0.0121932671749668 0.0315481242574986"
+            xyz="0.00103120214523473 0.0121761387587524 0.0315480874960164"
             rpy="0 0 0" />
-        <mass value="0.195186215018024" />
+        <mass value="0.195187143240719" />
         <inertia
-            ixx="6.44481651828701E-05"
-            ixy="-2.4085573008232E-06"
-            ixz="1.51842414146653E-07"
-            iyy="0.000126076399177829"
-            iyz="2.41493465740137E-06"
-            izz="0.000154086369804994" />
+            ixx="6.43790256535539E-05"
+            ixy="-1.2366166157046E-06"
+            ixz="1.97664606328472E-07"
+            iyy="0.000126146396374301"
+            iyz="2.41157078516408E-06"
+            izz="0.000154087076816444" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.dae" />
         </geometry>
@@ -615,26 +611,26 @@
         <origin xyz="0 0.091 0.0014165" rpy="-1.5708 -1.5708 0" />
         <parent link="fl_link5" />
         <child link="fl_link6" />
-        <axis xyz="0 0 -1" />
+        <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="100" velocity="3" />
     </joint>
 
     <link name="fl_link7">
         <inertial>
         <origin
-            xyz="-0.000277796606132918 -0.0467673525577484 -0.00921029800845349"
+            xyz="-0.000277778383727112 -0.0467673043650824 -0.00921029491873201"
             rpy="0 0 0" />
-        <mass value="0.0264822468303309" />
+        <mass value="0.02648229234527" />
         <inertia
-            ixx="9.99782326205027E-06"
-            ixy="-1.57547436734949E-07"
-            ixz="-2.71356023142448E-08"
-            iyy="6.17952359827087E-06"
-            iyz="-1.58939495981921E-06"
-            izz="1.42102234065569E-05" />
+            ixx="9.99787479924589E-06"
+            ixy="-1.57548495096104E-07"
+            ixz="-2.71342775003487E-08"
+            iyy="6.1795212293655E-06"
+            iyz="-1.58939803580081E-06"
+            izz="1.42102717246564E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="-0.0873 -1.5708 1.5708" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.dae" />
         </geometry>
@@ -650,7 +646,7 @@
         </collision>
     </link>
     <joint name="fl_joint7" type="prismatic">
-        <origin xyz="0 0 0.13503" rpy="1.5708 0 1.5898" />
+        <origin xyz="0 0 0.13503" rpy="1.5708 0 1.5708" />
         <parent link="fl_link6" />
         <child link="fl_link7" />
         <axis xyz="0 0 -1" />
@@ -660,20 +656,19 @@
     <link name="fl_link8">
         <inertial>
         <origin
-            xyz="0.000277796625703319 0.0467673536098445 -0.00921029808778402"
+            xyz="0.000277816920932317 0.0467673824063769 -0.00921030054508036"
             rpy="0 0 0" />
-        <mass
-            value="0.0264822458559721" />
+        <mass value="0.0264822021416248" />
         <inertia
-            ixx="9.99782280519136E-06"
-            ixy="-1.57547505769274E-07"
-            ixz="2.71356071742361E-08"
-            iyy="6.1795235777251E-06"
-            iyz="1.58939494382959E-06"
-            izz="1.42102229262876E-05" />
+            ixx="9.99779119357223E-06"
+            ixy="-1.57542283433504E-07"
+            ixz="2.71367446701359E-08"
+            iyy="6.17952441557932E-06"
+            iyz="1.58939319453383E-06"
+            izz="1.4210192754512E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="-0.0873 1.5708 1.5708" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.dae" />
         </geometry>
@@ -689,7 +684,7 @@
         </collision>
     </link>
     <joint name="fl_joint8" type="prismatic">
-        <origin xyz="0 0 0.13503" rpy="-1.5708 0 1.5898" />
+        <origin xyz="0 0 0.13503" rpy="-1.5708 0 1.5708" />
         <parent link="fl_link6" />
         <child link="fl_link8" />
         <axis xyz="0 0 1" />
@@ -699,25 +694,26 @@
     <!--***************************** front-right ****************************** -->
     <link name="fr_base_link">
         <inertial>
-            <origin xyz="-0.00973928490005032 1.83127089286699E-06 0.0410140167677137"
-                    rpy="0 0 0" />
-            <mass value="0.162352169522719" />
-            <inertia
-                ixx="0.000226592553127906"
-                ixy="-7.33974356968621E-08"
-                ixz="2.13221970218122E-06"
-                iyy="0.000269447877479622"
-                iyz="8.15167478682635E-09"
-                izz="0.000222318286704" />
+        <origin
+            xyz="-0.00979274765955341 1.82905827587138E-06 0.0410100126360189"
+            rpy="0 0 0" />
+        <mass value="0.162548567403693" />
+        <inertia
+            ixx="0.000226596924525071"
+            ixy="-7.33972270153965E-08"
+            ixz="2.13249977802622E-06"
+            iyy="0.000269444772561524"
+            iyz="8.15169009611054E-09"
+            izz="0.000222318258878636" />
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="1.5708 0 -1.5708" />
-            <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
-            </geometry>
-            <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1" />
-            </material>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
+        </geometry>
+        <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -732,24 +728,23 @@
         <child link="fr_base_link" />
         <axis xyz="0.0 0.0 1.0" />
     </joint>
-
+    
     <link name="fr_link1">
         <inertial>
         <origin
-            xyz="0.00131676031926984 0.000310288842009266 -0.00922874512303448"
+            xyz="0.00131676031927024 0.000310288842008612 -0.00922874512303437"
             rpy="0 0 0" />
-        <mass
-            value="0.0978679932242826" />
+        <mass value="0.0978679932242825" />
         <inertia
             ixx="7.76684558296782E-05"
-            ixy="1.09084650459928E-07"
+            ixy="1.09084650459924E-07"
             ixz="-1.9748053243241E-06"
-            iyy="9.24967780161546E-05"
-            iyz="9.91284646834577E-07"
-            izz="8.24589062407806E-05" />
+            iyy="9.24967780161547E-05"
+            iyz="9.91284646834582E-07"
+            izz="8.24589062407807E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.5708 0 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link1.dae" />
         </geometry>
@@ -763,7 +758,7 @@
                 <mesh filename="package://aloha_new_description/meshes/link1.STL" />
             </geometry>
         </collision>
-    </link>
+    </link>/
     <joint name="fr_joint1" type="revolute">
         <origin xyz="0 0 0.123" rpy="0 0 -1.5708" />
         <parent link="fr_base_link" />
@@ -774,19 +769,20 @@
 
     <link name="fr_link2">
         <inertial>
-        <origin xyz="0.147615889509426 -0.0174260242231321 0.00175953839968308"
-                rpy="0 0 0" />
-        <mass value="0.289570165726093" />
+        <origin
+            xyz="0.148793602378802 -0.00242026983944119 0.00175154638467948"
+            rpy="0 0 0" />
+        <mass value="0.290888938633388" />
         <inertia
-            ixx="0.000150112030598521"
-            ixy="8.58964962060178E-05"
-            ixz="-1.07408295088503E-06"
-            iyy="0.0017258471872165"
-            iyz="-9.9382405210397E-07"
-            izz="0.00177445407836346" />
+            ixx="0.000148959640166183"
+            ixy="-7.37750384371657E-05"
+            ixz="-9.68688405196236E-07"
+            iyy="0.00172800946632652"
+            iyz="-1.09692225564224E-06"
+            izz="0.0017754628344594" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="0 1.5708 -0.0873" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link2.dae" />
         </geometry>
@@ -795,15 +791,14 @@
         </material>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link2.STL" />
-        </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://aloha_new_description/meshes/link2.STL" />
+            </geometry>
         </collision>
     </link>
     <joint name="fr_joint2" type="revolute">
-        <!-- <origin xyz="0 0 0" rpy="1.5708 -0.18822 -1.5708" /> -->
-        <origin xyz="0 0 0" rpy="1.5708 -0.135857 -1.5708" />
+        <origin xyz="0 0 0" rpy="1.5708 -0.034907 -1.5708" />
         <parent link="fr_link1" />
         <child link="fr_link2" />
         <axis xyz="0 0 1" />
@@ -813,20 +808,19 @@
     <link name="fr_link3">
         <inertial>
         <origin
-            xyz="0.0156727369652958 0.104466495690107 0.000508479337323991"
+            xyz="-0.0996835215213704 0.0349477226691318 0.000508025815507312"
             rpy="0 0 0" />
-        <mass
-            value="0.290583612813414" />
+        <mass value="0.290847697793211" />
         <inertia
-            ixx="0.00022168673797825"
-            ixy="-7.57408494058923E-06"
-            ixz="-6.36995590559901E-07"
-            iyy="0.000100859208616699"
-            iyz="-8.16231100823835E-07"
-            izz="0.00024183974052656" />
+            ixx="0.000107879011637167"
+            ixy="2.92669521203626E-05"
+            ixz="6.825922326238E-07"
+            iyy="0.000214751671792086"
+            iyz="-7.78469047878196E-07"
+            izz="0.000241923439340319" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.4835 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link3.dae" />
         </geometry>
@@ -842,8 +836,7 @@
         </collision>
     </link>
     <joint name="fr_joint3" type="revolute">
-        <!-- <origin xyz="0.28503 0 0" rpy="0 0 1.3826" /> -->
-        <origin xyz="0.28503 0 0" rpy="0 0 1.347693" />
+        <origin xyz="0.28358 0.028726 0" rpy="0 0 0.06604341" />
         <parent link="fr_link2" />
         <child link="fr_link3" />
         <axis xyz="0 0 1" />
@@ -853,19 +846,19 @@
     <link name="fr_link4">
         <inertial>
         <origin
-            xyz="0.000276466145386484 -0.00102804142065371 -0.00472831185573786"
+            xyz="0.000276464622387979 -0.00102803669324875 -0.00472830700561663"
             rpy="0 0 0" />
-        <mass value="0.12708738799602" />
+        <mass value="0.127087348341362" />
         <inertia
-            ixx="3.82011721226907E-05"
-            ixy="-4.92402818734863E-08"
-            ixz="4.89562755452226E-08"
-            iyy="4.8704868787511E-05"
-            iyz="6.70807206169121E-08"
-            izz="4.10592238452447E-05" />
+            ixx="3.82011730423416E-05"
+            ixy="-4.92358350897513E-08"
+            ixz="4.89589432973119E-08"
+            iyy="4.87048555222578E-05"
+            iyz="6.70802942500512E-08"
+            izz="4.10592077565559E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.48 0 1.5708" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link4.dae" />
         </geometry>
@@ -881,31 +874,29 @@
         </collision>
     </link>
     <joint name="fr_joint4" type="revolute">
-        <origin
-        xyz="0.021984 0.25075 0"
-        rpy="-1.5708 0 0" />
+        <origin xyz="-0.24221 0.068514 0" rpy="-1.5708 0 1.3826" />
         <parent link="fr_link3" />
         <child link="fr_link4" />
-        <axis xyz="0 0 -1" />
+        <axis xyz="0 0 1" />
         <limit lower="-1.832" upper="1.832" effort="100" velocity="3" />
     </joint>
 
     <link name="fr_link5">
         <inertial>
         <origin
-            xyz="8.82261259079475E-05 0.0566829084341963 -0.00196119077435715"
+            xyz="8.82262433516967E-05 0.0566829014808256 -0.00196119720482461"
             rpy="0 0 0" />
-        <mass value="0.144711209371806" />
+        <mass value="0.144711242639457" />
         <inertia
-            ixx="4.39644269159504E-05"
-            ixy="-3.5921484085666E-08"
-            ixz="-1.89785003755334E-08"
-            iyy="5.63173857792914E-05"
-            iyz="-2.1540762372509E-07"
-            izz="4.88713595021133E-05" />
+            ixx="4.39644313662493E-05"
+            ixy="-3.59259686444846E-08"
+            ixz="-1.89747741386183E-08"
+            iyy="5.63173920951307E-05"
+            iyz="-2.1540716689785E-07"
+            izz="4.88713664675268E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.4835 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link5.dae" />
         </geometry>
@@ -931,19 +922,19 @@
     <link name="fr_link6">
         <inertial>
         <origin
-            xyz="0.000799734029960423 0.0121932671749668 0.0315481242574986"
+            xyz="0.00103120214523473 0.0121761387587524 0.0315480874960164"
             rpy="0 0 0" />
-        <mass value="0.195186215018024" />
+        <mass value="0.195187143240719" />
         <inertia
-            ixx="6.44481651828701E-05"
-            ixy="-2.4085573008232E-06"
-            ixz="1.51842414146653E-07"
-            iyy="0.000126076399177829"
-            iyz="2.41493465740137E-06"
-            izz="0.000154086369804994" />
+            ixx="6.43790256535539E-05"
+            ixy="-1.2366166157046E-06"
+            ixz="1.97664606328472E-07"
+            iyy="0.000126146396374301"
+            iyz="2.41157078516408E-06"
+            izz="0.000154087076816444" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.dae" />
         </geometry>
@@ -962,26 +953,26 @@
         <origin xyz="0 0.091 0.0014165" rpy="-1.5708 -1.5708 0" />
         <parent link="fr_link5" />
         <child link="fr_link6" />
-        <axis xyz="0 0 -1" />
+        <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="100" velocity="3" />
     </joint>
 
     <link name="fr_link7">
         <inertial>
         <origin
-            xyz="-0.000277796606132918 -0.0467673525577484 -0.00921029800845349"
+            xyz="-0.000277778383727112 -0.0467673043650824 -0.00921029491873201"
             rpy="0 0 0" />
-        <mass value="0.0264822468303309" />
+        <mass value="0.02648229234527" />
         <inertia
-            ixx="9.99782326205027E-06"
-            ixy="-1.57547436734949E-07"
-            ixz="-2.71356023142448E-08"
-            iyy="6.17952359827087E-06"
-            iyz="-1.58939495981921E-06"
-            izz="1.42102234065569E-05" />
+            ixx="9.99787479924589E-06"
+            ixy="-1.57548495096104E-07"
+            ixz="-2.71342775003487E-08"
+            iyy="6.1795212293655E-06"
+            iyz="-1.58939803580081E-06"
+            izz="1.42102717246564E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="-0.0873 -1.5708 1.5708" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.dae" />
         </geometry>
@@ -997,7 +988,7 @@
         </collision>
     </link>
     <joint name="fr_joint7" type="prismatic">
-        <origin xyz="0 0 0.13503" rpy="1.5708 0 1.5898" />
+        <origin xyz="0 0 0.13503" rpy="1.5708 0 1.5708" />
         <parent link="fr_link6" />
         <child link="fr_link7" />
         <axis xyz="0 0 -1" />
@@ -1007,20 +998,19 @@
     <link name="fr_link8">
         <inertial>
         <origin
-            xyz="0.000277796625703319 0.0467673536098445 -0.00921029808778402"
+            xyz="0.000277816920932317 0.0467673824063769 -0.00921030054508036"
             rpy="0 0 0" />
-        <mass
-            value="0.0264822458559721" />
+        <mass value="0.0264822021416248" />
         <inertia
-            ixx="9.99782280519136E-06"
-            ixy="-1.57547505769274E-07"
-            ixz="2.71356071742361E-08"
-            iyy="6.1795235777251E-06"
-            iyz="1.58939494382959E-06"
-            izz="1.42102229262876E-05" />
+            ixx="9.99779119357223E-06"
+            ixy="-1.57542283433504E-07"
+            ixz="2.71367446701359E-08"
+            iyy="6.17952441557932E-06"
+            iyz="1.58939319453383E-06"
+            izz="1.4210192754512E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="-0.0873 1.5708 1.5708" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.dae" />
         </geometry>
@@ -1036,7 +1026,7 @@
         </collision>
     </link>
     <joint name="fr_joint8" type="prismatic">
-        <origin xyz="0 0 0.13503" rpy="-1.5708 0 1.5898" />
+        <origin xyz="0 0 0.13503" rpy="-1.5708 0 1.5708" />
         <parent link="fr_link6" />
         <child link="fr_link8" />
         <axis xyz="0 0 1" />
@@ -1045,31 +1035,32 @@
     <!--***************************** back-left ****************************** -->
     <link name="bl_base_link">
         <inertial>
-            <origin xyz="-0.00973928490005032 1.83127089286699E-06 0.0410140167677137"
-                    rpy="0 0 0" />
-            <mass value="0.162352169522719" />
-            <inertia
-                ixx="0.000226592553127906"
-                ixy="-7.33974356968621E-08"
-                ixz="2.13221970218122E-06"
-                iyy="0.000269447877479622"
-                iyz="8.15167478682635E-09"
-                izz="0.000222318286704" />
+        <origin
+            xyz="-0.0097927476595534 1.82905827587127E-06 0.0410100126360189"
+            rpy="0 0 0" />
+        <mass value="0.162548567403693" />
+        <inertia
+            ixx="0.000226596924525071"
+            ixy="-7.3397227015398E-08"
+            ixz="2.13249977802621E-06"
+            iyy="0.000269444772561524"
+            iyz="8.15169009610875E-09"
+            izz="0.000222318258878636" />
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="1.5708 0 -1.5708" />
-            <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
-            </geometry>
-            <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1" />
-            </material>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
+        </geometry>
+        <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
-            </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
+        </geometry>
         </collision>
     </link>
     <joint name="bl_base_joint" type="fixed">
@@ -1082,19 +1073,19 @@
     <link name="bl_link1">
         <inertial>
         <origin
-            xyz="0.00131676031927025 0.00031028884200859 -0.0092287451230344"
+            xyz="0.00131676031927024 0.000310288842008612 -0.00922874512303437"
             rpy="0 0 0" />
-        <mass value="0.0978679932242824" />
+        <mass value="0.0978679932242826" />
         <inertia
-            ixx="7.76684558296781E-05"
-            ixy="1.09084650459893E-07"
-            ixz="-1.97480532432407E-06"
+            ixx="7.76684558296782E-05"
+            ixy="1.09084650459925E-07"
+            ixz="-1.9748053243241E-06"
             iyy="9.24967780161546E-05"
-            iyz="9.91284646834617E-07"
+            iyz="9.91284646834583E-07"
             izz="8.24589062407806E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.5708 0 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link1.dae" />
         </geometry>
@@ -1120,19 +1111,19 @@
     <link name="bl_link2">
         <inertial>
         <origin
-            xyz="0.14761589307449 -0.0174260240827081 0.00175953940346265"
+            xyz="0.148793602378802 -0.00242026983944155 0.00175154638467947"
             rpy="0 0 0" />
-        <mass value="0.289570182962832" />
+        <mass value="0.290888938633388" />
         <inertia
-            ixx="0.000150112037321562"
-            ixy="8.5896498691184E-05"
-            ixz="-1.07407683880235E-06"
-            iyy="0.00172584726154755"
-            iyz="-9.93825787564277E-07"
-            izz="0.00177445415709494" />
+            ixx="0.000148959640166182"
+            ixy="-7.37750384371659E-05"
+            ixz="-9.68688405196305E-07"
+            iyy="0.00172800946632652"
+            iyz="-1.09692225564222E-06"
+            izz="0.0017754628344594" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="0 1.5708 -0.0873" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link2.dae" />
         </geometry>
@@ -1148,8 +1139,7 @@
         </collision>
     </link>
     <joint name="bl_joint2" type="revolute">
-        <!-- <origin xyz="0 0 0" rpy="1.5708 -0.18822 -1.5708" /> -->
-        <origin xyz="0 0 0" rpy="1.5708 -0.135857 -1.5708" />
+        <origin xyz="0 0 0" rpy="1.5708 -0.034907 -1.5708" />
         <parent link="bl_link1" />
         <child link="bl_link2" />
         <axis xyz="0 0 1" />
@@ -1159,19 +1149,19 @@
     <link name="bl_link3">
         <inertial>
         <origin
-            xyz="0.0156727363589359 0.104466494004719 0.000508480146739494"
+            xyz="-0.0996835297298523 0.0349477267125974 0.000508019581893638"
             rpy="0 0 0" />
-        <mass value="0.29058359696822" />
+        <mass value="0.290847805579065" />
         <inertia
-            ixx="0.000221686715091211"
-            ixy="-7.5740818045402E-06"
-            ixz="-6.3699565468093E-07"
-            iyy="0.000100859207949748"
-            iyz="-8.16231429491213E-07"
-            izz="0.00024183971704822" />
+            ixx="0.000107879020798026"
+            ixy="2.92669848509585E-05"
+            ixz="6.82592307795026E-07"
+            iyy="0.000214751827465516"
+            iyz="-7.78468839754645E-07"
+            izz="0.000241923602270227" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.4835 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link3.dae" />
         </geometry>
@@ -1187,8 +1177,7 @@
         </collision>
     </link>
     <joint name="bl_joint3" type="revolute">
-        <!-- <origin xyz="0.28503 0 0" rpy="0 0 1.3826" /> -->
-        <origin xyz="0.28503 0 0" rpy="0 0 1.347693" />
+        <origin xyz="0.28358 0.028726 0" rpy="0 0 0.06604341" />
         <parent link="bl_link2" />
         <child link="bl_link3" />
         <axis xyz="0 0 1" />
@@ -1198,19 +1187,19 @@
     <link name="bl_link4">
         <inertial>
         <origin
-            xyz="0.000276466145386484 -0.00102804142065354 -0.00472831185573979"
+            xyz="0.00027646462238809 -0.00102803669324874 -0.00472830700561663"
             rpy="0 0 0" />
-        <mass value="0.12708738799602" />
+        <mass value="0.127087348341362" />
         <inertia
-            ixx="3.82011721227155E-05"
-            ixy="-4.92402818921466E-08"
-            ixz="4.8956275545214E-08"
-            iyy="4.87048687875256E-05"
-            iyz="6.70807206169124E-08"
-            izz="4.10592238452832E-05" />
+            ixx="3.82011730423025E-05"
+            ixy="-4.92358351056127E-08"
+            ixz="4.89589432974857E-08"
+            iyy="4.87048555222535E-05"
+            iyz="6.7080294248456E-08"
+            izz="4.10592077565126E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.48 0 1.5708" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link4.dae" />
         </geometry>
@@ -1226,29 +1215,29 @@
         </collision>
     </link>
     <joint name="bl_joint4" type="revolute">
-        <origin xyz="0.021984 0.25075 0" rpy="-1.5708 0 0" />
+        <origin xyz="-0.24221 0.068514 0" rpy="-1.5708 0 1.3826" />
         <parent link="bl_link3" />
         <child link="bl_link4" />
-        <axis xyz="0 0 -1" />
+        <axis xyz="0 0 1" />
         <limit lower="-1.832" upper="1.832" effort="100" velocity="3" />
     </joint>
 
     <link name="bl_link5">
         <inertial>
         <origin
-            xyz="8.82261259079198E-05 0.0566829084341944 -0.00196119077435727"
+            xyz="8.8226243351669E-05 0.0566829014808255 -0.00196119720482464"
             rpy="0 0 0" />
-        <mass value="0.144711209371805" />
+        <mass value="0.144711242639457" />
         <inertia
-            ixx="4.39644269159933E-05"
-            ixy="-3.59214840862719E-08"
-            ixz="-1.89785003726242E-08"
-            iyy="5.63173857793374E-05"
-            iyz="-2.15407623729531E-07"
-            izz="4.88713595021165E-05" />
+            ixx="4.39644313662491E-05"
+            ixy="-3.59259686441454E-08"
+            ixz="-1.89747741354704E-08"
+            iyy="5.63173920951298E-05"
+            iyz="-2.15407166895779E-07"
+            izz="4.8871366467526E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.4835 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link5.dae" />
         </geometry>
@@ -1274,21 +1263,21 @@
     <link name="bl_link6">
         <inertial>
         <origin
-            xyz="-1.35828400638213E-06 -0.0145192655484311 0.0332869916083767"
+            xyz="-1.37691016349967E-06 -0.014519262114053 0.0332869772690133"
             rpy="0 0 0" />
-        <mass value="0.214619655313844" />
+        <mass value="0.214619908036656" />
         <inertia
-            ixx="0.000328373001951026"
-            ixy="2.6519769754208E-08"
-            ixz="-6.17539675843118E-10"
-            iyy="0.000153553402065615"
-            iyz="-1.04755637882815E-05"
-            izz="0.000384841078563999" />
+            ixx="0.000328373107348731"
+            ixy="2.61558325659115E-08"
+            ixz="-6.40508594967983E-10"
+            iyy="0.000153553731811504"
+            iyz="-1.04759832101157E-05"
+            izz="0.000384841404656954" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1297,7 +1286,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.STL" />
         </geometry>
         </collision>
     </link>
@@ -1305,28 +1294,28 @@
         <origin xyz="0 0.091 0.0014165" rpy="-1.5708 -1.5708 0" />
         <parent link="bl_link5" />
         <child link="bl_link6" />
-        <axis xyz="0 0 -1" />
+        <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="100" velocity="3" />
     </joint>
 
     <link name="bl_link7">
         <inertial>
         <origin
-            xyz="0.0220608711302828 0.00159213382342127 -0.0140000104411386"
+            xyz="0.0220608713440565 0.00159213407754896 -0.0140000105362036"
             rpy="0 0 0" />
-        <mass value="0.0163980778203027" />
+        <mass value="0.0163980774922961" />
         <inertia
-            ixx="1.12239962986094E-06"
-            ixy="-1.70907039193007E-07"
-            ixz="-1.94073878426408E-12"
-            iyy="8.6711375712708E-06"
-            iyz="-6.39227893006478E-13"
-            izz="7.92440281462933E-06" />
+            ixx="1.1223995605395E-06"
+            ixy="-1.7090699232665E-07"
+            ixz="-1.95842510288234E-12"
+            iyy="8.67113746385413E-06"
+            iyz="-6.32854624480994E-13"
+            izz="7.92440273384695E-06" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.5708 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1335,7 +1324,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.STL" />
         </geometry>
         </collision>
     </link>
@@ -1344,27 +1333,27 @@
         <parent link="bl_link6" />
         <child link="bl_link7" />
         <axis xyz="0 0 -1" />
-        <limit lower="0" upper="0.036" effort="10" velocity="1" />
+        <limit lower="0" upper="0.04" effort="10" velocity="1" />
     </joint>
 
     <link name="bl_link8">
         <inertial>
         <origin
-            xyz="0.0231312127032236 -0.00164133179294612 -0.0139999979719777"
+            xyz="0.023131213322327 -0.00164133214045334 -0.0139999978862491"
             rpy="0 0 0" />
-        <mass value="0.0159830776295144" />
+        <mass value="0.0159830768118613" />
         <inertia
-            ixx="1.09529865085152E-06"
-            ixy="1.17861574175912E-07"
-            ixz="4.70869585315262E-13"
-            iyy="9.31448134061065E-06"
-            iyz="-1.25105834171426E-13"
-            izz="8.59093656354732E-06" />
+            ixx="1.09529854228106E-06"
+            ixy="1.17861512151355E-07"
+            ixz="4.93899747203005E-13"
+            iyy="9.31448112120573E-06"
+            iyz="-1.2871372298354E-13"
+            izz="8.59093640430962E-06" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1373,7 +1362,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.STL" />
         </geometry>
         </collision>
     </link>
@@ -1382,36 +1371,37 @@
         <parent link="bl_link6" />
         <child link="bl_link8" />
         <axis xyz="0 0 1" />
-        <limit lower="-0.036" upper="0" effort="10" velocity="1" />
+        <limit lower="-0.04" upper="0" effort="10" velocity="1" />
     </joint>
     <!--***************************** back-right ****************************** -->
     <link name="br_base_link">
         <inertial>
-            <origin xyz="-0.00973928490005032 1.83127089286699E-06 0.0410140167677137"
-                    rpy="0 0 0" />
-            <mass value="0.162352169522719" />
-            <inertia
-                ixx="0.000226592553127906"
-                ixy="-7.33974356968621E-08"
-                ixz="2.13221970218122E-06"
-                iyy="0.000269447877479622"
-                iyz="8.15167478682635E-09"
-                izz="0.000222318286704" />
+        <origin
+            xyz="-0.0097927476595534 1.82905827587127E-06 0.0410100126360189"
+            rpy="0 0 0" />
+        <mass value="0.162548567403693" />
+        <inertia
+            ixx="0.000226596924525071"
+            ixy="-7.3397227015398E-08"
+            ixz="2.13249977802621E-06"
+            iyy="0.000269444772561524"
+            iyz="8.15169009610875E-09"
+            izz="0.000222318258878636" />
         </inertial>
         <visual>
-            <origin xyz="0 0 0" rpy="1.5708 0 -1.5708" />
-            <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
-            </geometry>
-            <material name="">
-                <color rgba="0.75294 0.75294 0.75294 1" />
-            </material>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
+        </geometry>
+        <material name="">
+            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+        </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
-            </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
+        </geometry>
         </collision>
     </link>
     <joint name="br_base_joint" type="fixed">
@@ -1424,19 +1414,19 @@
     <link name="br_link1">
         <inertial>
         <origin
-            xyz="0.00131676031927025 0.00031028884200859 -0.0092287451230344"
+            xyz="0.00131676031927024 0.000310288842008612 -0.00922874512303437"
             rpy="0 0 0" />
-        <mass value="0.0978679932242824" />
+        <mass value="0.0978679932242826" />
         <inertia
-            ixx="7.76684558296781E-05"
-            ixy="1.09084650459893E-07"
-            ixz="-1.97480532432407E-06"
+            ixx="7.76684558296782E-05"
+            ixy="1.09084650459925E-07"
+            ixz="-1.9748053243241E-06"
             iyy="9.24967780161546E-05"
-            iyz="9.91284646834617E-07"
+            iyz="9.91284646834583E-07"
             izz="8.24589062407806E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.5708 0 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link1.dae" />
         </geometry>
@@ -1462,19 +1452,19 @@
     <link name="br_link2">
         <inertial>
         <origin
-            xyz="0.14761589307449 -0.0174260240827081 0.00175953940346265"
+            xyz="0.148793602378802 -0.00242026983944155 0.00175154638467947"
             rpy="0 0 0" />
-        <mass value="0.289570182962832" />
+        <mass value="0.290888938633388" />
         <inertia
-            ixx="0.000150112037321562"
-            ixy="8.5896498691184E-05"
-            ixz="-1.07407683880235E-06"
-            iyy="0.00172584726154755"
-            iyz="-9.93825787564277E-07"
-            izz="0.00177445415709494" />
+            ixx="0.000148959640166182"
+            ixy="-7.37750384371659E-05"
+            ixz="-9.68688405196305E-07"
+            iyy="0.00172800946632652"
+            iyz="-1.09692225564222E-06"
+            izz="0.0017754628344594" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="0 1.5708 -0.0873" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link2.dae" />
         </geometry>
@@ -1490,8 +1480,7 @@
         </collision>
     </link>
     <joint name="br_joint2" type="revolute">
-        <!-- <origin xyz="0 0 0" rpy="1.5708 -0.18822 -1.5708" /> -->
-        <origin xyz="0 0 0" rpy="1.5708 -0.135857 -1.5708" />
+        <origin xyz="0 0 0" rpy="1.5708 -0.034907 -1.5708" />
         <parent link="br_link1" />
         <child link="br_link2" />
         <axis xyz="0 0 1" />
@@ -1501,19 +1490,19 @@
     <link name="br_link3">
         <inertial>
         <origin
-            xyz="0.0156727363589359 0.104466494004719 0.000508480146739494"
+            xyz="-0.0996835297298523 0.0349477267125974 0.000508019581893638"
             rpy="0 0 0" />
-        <mass value="0.29058359696822" />
+        <mass value="0.290847805579065" />
         <inertia
-            ixx="0.000221686715091211"
-            ixy="-7.5740818045402E-06"
-            ixz="-6.3699565468093E-07"
-            iyy="0.000100859207949748"
-            iyz="-8.16231429491213E-07"
-            izz="0.00024183971704822" />
+            ixx="0.000107879020798026"
+            ixy="2.92669848509585E-05"
+            ixz="6.82592307795026E-07"
+            iyy="0.000214751827465516"
+            iyz="-7.78468839754645E-07"
+            izz="0.000241923602270227" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.4835 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link3.dae" />
         </geometry>
@@ -1529,8 +1518,7 @@
         </collision>
     </link>
     <joint name="br_joint3" type="revolute">
-        <!-- <origin xyz="0.28503 0 0" rpy="0 0 1.3826" /> -->
-        <origin xyz="0.28503 0 0" rpy="0 0 1.347693" />
+        <origin xyz="0.28358 0.028726 0" rpy="0 0 0.06604341" />
         <parent link="br_link2" />
         <child link="br_link3" />
         <axis xyz="0 0 1" />
@@ -1540,19 +1528,19 @@
     <link name="br_link4">
         <inertial>
         <origin
-            xyz="0.000276466145386484 -0.00102804142065354 -0.00472831185573979"
+            xyz="0.00027646462238809 -0.00102803669324874 -0.00472830700561663"
             rpy="0 0 0" />
-        <mass value="0.12708738799602" />
+        <mass value="0.127087348341362" />
         <inertia
-            ixx="3.82011721227155E-05"
-            ixy="-4.92402818921466E-08"
-            ixz="4.8956275545214E-08"
-            iyy="4.87048687875256E-05"
-            iyz="6.70807206169124E-08"
-            izz="4.10592238452832E-05" />
+            ixx="3.82011730423025E-05"
+            ixy="-4.92358351056127E-08"
+            ixz="4.89589432974857E-08"
+            iyy="4.87048555222535E-05"
+            iyz="6.7080294248456E-08"
+            izz="4.10592077565126E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.48 0 1.5708" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link4.dae" />
         </geometry>
@@ -1568,29 +1556,29 @@
         </collision>
     </link>
     <joint name="br_joint4" type="revolute">
-        <origin xyz="0.021984 0.25075 0" rpy="-1.5708 0 0" />
+        <origin xyz="-0.24221 0.068514 0" rpy="-1.5708 0 1.3826" />
         <parent link="br_link3" />
         <child link="br_link4" />
-        <axis xyz="0 0 -1" />
+        <axis xyz="0 0 1" />
         <limit lower="-1.832" upper="1.832" effort="100" velocity="3" />
     </joint>
 
     <link name="br_link5">
         <inertial>
         <origin
-            xyz="8.82261259079198E-05 0.0566829084341944 -0.00196119077435727"
+            xyz="8.8226243351669E-05 0.0566829014808255 -0.00196119720482464"
             rpy="0 0 0" />
-        <mass value="0.144711209371805" />
+        <mass value="0.144711242639457" />
         <inertia
-            ixx="4.39644269159933E-05"
-            ixy="-3.59214840862719E-08"
-            ixz="-1.89785003726242E-08"
-            iyy="5.63173857793374E-05"
-            iyz="-2.15407623729531E-07"
-            izz="4.88713595021165E-05" />
+            ixx="4.39644313662491E-05"
+            ixy="-3.59259686441454E-08"
+            ixz="-1.89747741354704E-08"
+            iyy="5.63173920951298E-05"
+            iyz="-2.15407166895779E-07"
+            izz="4.8871366467526E-05" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.4835 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/link5.dae" />
         </geometry>
@@ -1616,21 +1604,21 @@
     <link name="br_link6">
         <inertial>
         <origin
-            xyz="-1.35828400638213E-06 -0.0145192655484311 0.0332869916083767"
+            xyz="-1.37691016349967E-06 -0.014519262114053 0.0332869772690133"
             rpy="0 0 0" />
-        <mass value="0.214619655313844" />
+        <mass value="0.214619908036656" />
         <inertia
-            ixx="0.000328373001951026"
-            ixy="2.6519769754208E-08"
-            ixz="-6.17539675843118E-10"
-            iyy="0.000153553402065615"
-            iyz="-1.04755637882815E-05"
-            izz="0.000384841078563999" />
+            ixx="0.000328373107348731"
+            ixy="2.61558325659115E-08"
+            ixz="-6.40508594967983E-10"
+            iyy="0.000153553731811504"
+            iyz="-1.04759832101157E-05"
+            izz="0.000384841404656954" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="3.14159 0 3.14159" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1639,7 +1627,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.STL" />
         </geometry>
         </collision>
     </link>
@@ -1647,28 +1635,28 @@
         <origin xyz="0 0.091 0.0014165" rpy="-1.5708 -1.5708 0" />
         <parent link="br_link5" />
         <child link="br_link6" />
-        <axis xyz="0 0 -1" />
+        <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="100" velocity="3" />
     </joint>
 
     <link name="br_link7">
         <inertial>
         <origin
-            xyz="0.0220608711302828 0.00159213382342127 -0.0140000104411386"
+            xyz="0.0220608713440565 0.00159213407754896 -0.0140000105362036"
             rpy="0 0 0" />
-        <mass value="0.0163980778203027" />
+        <mass value="0.0163980774922961" />
         <inertia
-            ixx="1.12239962986094E-06"
-            ixy="-1.70907039193007E-07"
-            ixz="-1.94073878426408E-12"
-            iyy="8.6711375712708E-06"
-            iyz="-6.39227893006478E-13"
-            izz="7.92440281462933E-06" />
+            ixx="1.1223995605395E-06"
+            ixy="-1.7090699232665E-07"
+            ixz="-1.95842510288234E-12"
+            iyy="8.67113746385413E-06"
+            iyz="-6.32854624480994E-13"
+            izz="7.92440273384695E-06" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="1.5708 1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1677,7 +1665,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.STL" />
         </geometry>
         </collision>
     </link>
@@ -1686,27 +1674,27 @@
         <parent link="br_link6" />
         <child link="br_link7" />
         <axis xyz="0 0 -1" />
-        <limit lower="0" upper="0.036" effort="10" velocity="1" />
+        <limit lower="0" upper="0.04" effort="10" velocity="1" />
     </joint>
 
     <link name="br_link8">
         <inertial>
         <origin
-            xyz="0.0231312127032236 -0.00164133179294612 -0.0139999979719777"
+            xyz="0.023131213322327 -0.00164133214045334 -0.0139999978862491"
             rpy="0 0 0" />
-        <mass value="0.0159830776295144" />
+        <mass value="0.0159830768118613" />
         <inertia
-            ixx="1.09529865085152E-06"
-            ixy="1.17861574175912E-07"
-            ixz="4.70869585315262E-13"
-            iyy="9.31448134061065E-06"
-            iyz="-1.25105834171426E-13"
-            izz="8.59093656354732E-06" />
+            ixx="1.09529854228106E-06"
+            ixy="1.17861512151355E-07"
+            ixz="4.93899747203005E-13"
+            iyy="9.31448112120573E-06"
+            iyz="-1.2871372298354E-13"
+            izz="8.59093640430962E-06" />
         </inertial>
         <visual>
-        <origin xyz="0 0 0" rpy="-1.5708 -1.5708 0" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1715,7 +1703,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.STL" />
         </geometry>
         </collision>
     </link>
@@ -1724,7 +1712,7 @@
         <parent link="br_link6" />
         <child link="br_link8" />
         <axis xyz="0 0 1" />
-        <limit lower="-0.036" upper="0" effort="10" velocity="1" />
+        <limit lower="-0.04" upper="0" effort="10" velocity="1" />
     </joint>
     
 </robot>
