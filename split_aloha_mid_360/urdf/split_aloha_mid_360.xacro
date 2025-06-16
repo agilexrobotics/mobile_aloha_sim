@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot_name">
+    <xacro:include filename="$(find split_aloha_mid_360)/urdf/ranger_mini.xacro"/>
+  <link
+    name="box_link">
+    <inertial>
+      <origin
+        xyz="0.10921 -0.0087718 0.52779"
+        rpy="0 0 0" />
+      <mass
+        value="27.261" />
+      <inertia
+        ixx="1.8122"
+        ixy="4.558E-05"
+        ixz="0.014722"
+        iyy="1.7779"
+        iyz="-4.0693E-05"
+        izz="0.28053" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/box_link.dae" scale="1000 1000 1000"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/box_link.dae" scale="1000 1000 1000" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="box_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="box_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_camera_link">
+    <inertial>
+      <origin
+        xyz="-0.011443 0.0003607 -0.0012124"
+        rpy="0 0 0" />
+      <mass
+        value="0.020053" />
+      <inertia
+        ixx="1.1182E-05"
+        ixy="2.589E-09"
+        ixz="5.6552E-08"
+        iyy="2.2729E-06"
+        iyz="-6.7447E-07"
+        izz="1.0081E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/front_camera_link.dae" scale="1000 1000 1000" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/front_camera_link.dae" scale="1000 1000 1000"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.35679 0 0.15819"
+      rpy="-0.11187 0.6606 -0.0051043" />
+    <parent
+      link="box_link" />
+    <child
+      link="front_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lidar_link">
+    <inertial>
+      <origin
+        xyz="-0.0022133 -0.00090659 0.025996"
+        rpy="0 0 0" />
+      <mass
+        value="0.048617" />
+      <inertia
+        ixx="1.0358E-05"
+        ixy="9.2377E-09"
+        ixz="-2.6386E-07"
+        iyy="1.0387E-05"
+        iyz="-2.6377E-07"
+        izz="1.7919E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/lidar_link.dae" scale="1000 1000 1000"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/lidar_link.dae" scale="1000 1000 1000"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.31755 0 0.036188"
+      rpy="-0.035132 0.20001 -0.001242" />
+    <parent
+      link="box_link" />
+    <child
+      link="lidar_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lifting_link">
+    <inertial>
+      <origin
+        xyz="0.071327 0.00032985 0.10599"
+        rpy="0 0 0" />
+      <mass
+        value="0.47066" />
+      <inertia
+        ixx="0.010952"
+        ixy="-5.2124E-06"
+        ixz="-0.00046317"
+        iyy="0.0018329"
+        iyz="-4.6428E-06"
+        izz="0.010201" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/lifting_link.dae" scale="1000 1000 1000"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/lifting_link.dae" scale="1000 1000 1000"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lifting_joint"
+    type="prismatic">
+    <origin
+      xyz="0.22448 0 1.1147"
+      rpy="0 0 0" />
+    <parent
+      link="box_link" />
+    <child
+      link="lifting_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit lower="-0.6" upper="0.0" effort="100" velocity="10.0"/>
+      
+  </joint>
+  <link
+    name="top_camera_link">
+    <inertial>
+      <origin
+        xyz="-0.011443 2.4833E-05 -0.0012615"
+        rpy="0 0 0" />
+      <mass
+        value="0.020053" />
+      <inertia
+        ixx="1.1181E-05"
+        ixy="1.204E-07"
+        ixz="4.9068E-08"
+        iyy="2.2587E-06"
+        iyz="5.7637E-07"
+        izz="1.0097E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/top_camera_link.dae" scale="1000 1000 1000"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://split_aloha_mid_360/meshes/top_camera_link.dae" scale="1000 1000 1000"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="top_camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.16194 0 0.29838"
+      rpy="0.049713 0.00080758 -0.01623" />
+    <parent
+      link="lifting_link" />
+    <child
+      link="top_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+</robot>
