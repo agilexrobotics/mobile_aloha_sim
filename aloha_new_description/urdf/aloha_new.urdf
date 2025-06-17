@@ -1277,7 +1277,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1286,7 +1286,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.STL" />
         </geometry>
         </collision>
     </link>
@@ -1315,7 +1315,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1324,7 +1324,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.STL" />
         </geometry>
         </collision>
     </link>
@@ -1353,7 +1353,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1362,7 +1362,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.STL" />
         </geometry>
         </collision>
     </link>
@@ -1618,7 +1618,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1627,7 +1627,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link6.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.STL" />
         </geometry>
         </collision>
     </link>
@@ -1656,7 +1656,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1665,7 +1665,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.STL" />
         </geometry>
         </collision>
     </link>
@@ -1694,7 +1694,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.dae" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.dae" />
         </geometry>
         <material name="">
             <color rgba="1 1 1 1" />
@@ -1703,7 +1703,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.STL" />
+            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.STL" />
         </geometry>
         </collision>
     </link>
