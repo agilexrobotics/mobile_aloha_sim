@@ -3,7 +3,7 @@
   <arg name="rviz_config" default="$(find piper_description)/rviz/piper_ctrl.rviz" />
   <param
     name="robot_description"
-    textfile="$(find piper_description)/urdf/piper_description.urdf" />
+    textfile="$(find piper_description)/urdf/piper_description_v100.urdf" />
   
   <!-- <arg name="jnt_stat_source" default="[/joint_states_origin]" />
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">

@@ -4,8 +4,8 @@
 <xacro:include filename="$(find split_aloha_mid_360)/urdf/split_aloha_mid_360.xacro"/>
 
 <!-- <xacro:include filename="$(find piper_description)/urdf/piper_description_left.xacro"/> -->
-<xacro:include filename="$(find piper_description)/urdf/piper_description_left.xacro"/>
-<xacro:include filename="$(find piper_description)/urdf/piper_description_right.xacro"/>
+<xacro:include filename="$(find piper_description)/urdf/piper_description_with_camera_left.xacro"/>
+<xacro:include filename="$(find piper_description)/urdf/piper_description_with_camera_right.xacro"/>
 
 <!-- <xacro:include filename="$(find piper_description)/urdf/piper_description_right.xacro"/> -->
 

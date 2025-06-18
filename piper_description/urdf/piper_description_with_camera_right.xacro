@@ -2,6 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="piper_camera">
     <xacro:macro name="right_arm" params="namespace">
 
+
     <link name="${namespace}/arm_base">
         <inertial>
         <origin
@@ -19,7 +20,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/base_link.dae" />
+            <mesh filename="package://piper_description/meshes/dae/base_link.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -28,7 +29,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
+                <mesh filename="package://piper_description/meshes/dae/base_link.dae" />
             </geometry>
         </collision>
     </link>
@@ -50,7 +51,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link1.dae" />
+            <mesh filename="package://piper_description/meshes/dae/link1.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -59,7 +60,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://aloha_new_description/meshes/link1.STL" />
+                <mesh filename="package://piper_description/meshes/dae/link1.dae" />
             </geometry>
         </collision>
     </link>
@@ -88,7 +89,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link2.dae" />
+            <mesh filename="package://piper_description/meshes/dae/link2.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -97,7 +98,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://aloha_new_description/meshes/link2.STL" />
+                <mesh filename="package://piper_description/meshes/dae/link2.dae" />
             </geometry>
         </collision>
     </link>
@@ -126,7 +127,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link3.dae" />
+            <mesh filename="package://piper_description/meshes/dae/link3.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -135,7 +136,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link3.STL" />
+            <mesh filename="package://piper_description/meshes/dae/link3.dae" />
         </geometry>
         </collision>
     </link>
@@ -164,7 +165,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link4.dae" />
+            <mesh filename="package://piper_description/meshes/dae/link4.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -173,7 +174,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link4.STL" />
+            <mesh filename="package://piper_description/meshes/dae/link4.dae" />
         </geometry>
         </collision>
     </link>
@@ -202,7 +203,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link5.dae" />
+            <mesh filename="package://piper_description/meshes/dae/link5.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -211,7 +212,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link5.STL" />
+            <mesh filename="package://piper_description/meshes/dae/link5.dae" />
         </geometry>
         </collision>
     </link>
@@ -238,19 +239,18 @@
             izz="0.000154087076816444" />
         </inertial>
         <visual>
-        <origin xyz="-0.002 -0.0078 0.06" rpy="-1.57 0 0" />
+        <origin xyz="-0.002 -0.008 0" rpy="-1.57 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/gripper_base_100_v2.dae"/>
+            <mesh filename="package://piper_description/meshes/dae/camera_v3.dae"/>
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
         </material>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <origin xyz="-0.002 -0.0078 0.06" rpy="-1.57 0 0" />
+        <origin xyz="-0.002 -0.008 0" rpy="-1.57 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/gripper_base_100_v2.dae"/>
+            <mesh filename="package://piper_description/meshes/dae/camera_v3.dae"/>
         </geometry>
         </collision>
     </link>
@@ -279,7 +279,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.dae" />
+            <mesh filename="package://piper_description/meshes/dae/link7.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -288,7 +288,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link7.STL" />
+            <mesh filename="package://piper_description/meshes/dae/link7.dae" />
         </geometry>
         </collision>
     </link>
@@ -297,7 +297,7 @@
         <parent link="${namespace}/link6" />
         <child link="${namespace}/link7" />
         <axis xyz="0 0 -1" />
-        <limit lower="0" upper="0.04" effort="10" velocity="1" />
+        <limit lower="0" upper="0.05" effort="10" velocity="1" />
     </joint>
 
     <link name="${namespace}/link8">
@@ -317,7 +317,7 @@
         <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.dae" />
+            <mesh filename="package://piper_description/meshes/dae/link8.dae" />
         </geometry>
         <material name="">
             <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -326,7 +326,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_slave_meshes/link8.STL" />
+            <mesh filename="package://piper_description/meshes/dae/link8.dae" />
         </geometry>
         </collision>
     </link>
@@ -335,7 +335,7 @@
         <parent link="${namespace}/link6" />
         <child link="${namespace}/link8" />
         <axis xyz="0 0 1" />
-        <limit lower="-0.04" upper="0" effort="10" velocity="1" />
+        <limit lower="-0.05" upper="0" effort="10" velocity="1" />
     </joint>
 
 </xacro:macro>

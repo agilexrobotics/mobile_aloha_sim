@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="piper_camera">
-    <xacro:macro name="left_arm" params="namespace">
-
-
-    <link name="${namespace}/arm_base">
+    <link name="arm_base">
         <inertial>
         <origin
             xyz="-0.00979274765955341 1.82905827587138E-06 0.0410100126360189"
@@ -34,7 +31,7 @@
         </collision>
     </link>
 
-    <link name="${namespace}/link1">
+    <link name="link1">
         <inertial>
         <origin
             xyz="0.00131676031927024 0.000310288842008612 -0.00922874512303437"
@@ -64,15 +61,15 @@
             </geometry>
         </collision>
     </link>
-    <joint name="${namespace}/joint1" type="revolute">
+    <joint name="joint1" type="revolute">
         <origin xyz="0 0 0.123" rpy="0 0 -1.5708" />
-        <parent link="${namespace}/arm_base" />
-        <child link="${namespace}/link1" />
+        <parent link="arm_base" />
+        <child link="link1" />
         <axis xyz="0 0 1" />
         <limit lower="-2.618" upper="2.618" effort="100" velocity="3" />
     </joint>
 
-    <link name="${namespace}/link2">
+    <link name="link2">
         <inertial>
         <origin
             xyz="0.148793602378802 -0.00242026983944119 0.00175154638467948"
@@ -102,15 +99,15 @@
             </geometry>
         </collision>
     </link>
-    <joint name="${namespace}/joint2" type="revolute">
+    <joint name="joint2" type="revolute">
         <origin xyz="0 0 0" rpy="1.5708 -0.034907 -1.5708" />
-        <parent link="${namespace}/link1" />
-        <child link="${namespace}/link2" />
+        <parent link="link1" />
+        <child link="link2" />
         <axis xyz="0 0 1" />
         <limit lower="0" upper="3.14" effort="100" velocity="3" />
     </joint>
 
-    <link name="${namespace}/link3">
+    <link name="link3">
         <inertial>
         <origin
             xyz="-0.0996835215213704 0.0349477226691318 0.000508025815507312"
@@ -140,15 +137,15 @@
         </geometry>
         </collision>
     </link>
-    <joint name="${namespace}/joint3" type="revolute">
+    <joint name="joint3" type="revolute">
         <origin xyz="0.28358 0.028726 0" rpy="0 0 0.06604341" />
-        <parent link="${namespace}/link2" />
-        <child link="${namespace}/link3" />
+        <parent link="link2" />
+        <child link="link3" />
         <axis xyz="0 0 1" />
         <limit lower="-2.697" upper="0" effort="100" velocity="3" />
     </joint>
 
-    <link name="${namespace}/link4">
+    <link name="link4">
         <inertial>
         <origin
             xyz="0.000276464622387979 -0.00102803669324875 -0.00472830700561663"
@@ -178,15 +175,15 @@
         </geometry>
         </collision>
     </link>
-    <joint name="${namespace}/joint4" type="revolute">
+    <joint name="joint4" type="revolute">
         <origin xyz="-0.24221 0.068514 0" rpy="-1.5708 0 1.3826" />
-        <parent link="${namespace}/link3" />
-        <child link="${namespace}/link4" />
+        <parent link="link3" />
+        <child link="link4" />
         <axis xyz="0 0 1" />
         <limit lower="-1.832" upper="1.832" effort="100" velocity="3" />
     </joint>
 
-    <link name="${namespace}/link5">
+    <link name="link5">
         <inertial>
         <origin
             xyz="8.82262433516967E-05 0.0566829014808256 -0.00196119720482461"
@@ -216,15 +213,15 @@
         </geometry>
         </collision>
     </link>
-    <joint name="${namespace}/joint5" type="revolute">
+    <joint name="joint5" type="revolute">
         <origin xyz="0 0 0" rpy="1.5708 0 0" />
-        <parent link="${namespace}/link4" />
-        <child link="${namespace}/link5" />
+        <parent link="link4" />
+        <child link="link5" />
         <axis xyz="0 0 1" />
         <limit lower="-1.22" upper="1.22" effort="100" velocity="3" />
     </joint>
 
-    <link name="${namespace}/link6">
+    <link name="link6">
         <inertial>
         <origin
             xyz="0.00103120214523473 0.0121761387587524 0.0315480874960164"
@@ -254,15 +251,15 @@
         </geometry>
         </collision>
     </link>
-    <joint name="${namespace}/joint6" type="revolute">
+    <joint name="joint6" type="revolute">
         <origin xyz="0 0.091 0.0014165" rpy="-1.5708 -1.5708 0" />
-        <parent link="${namespace}/link5" />
-        <child link="${namespace}/link6" />
+        <parent link="link5" />
+        <child link="link6" />
         <axis xyz="0 0 1" />
         <limit lower="-3.14" upper="3.14" effort="100" velocity="3" />
     </joint>
 
-    <link name="${namespace}/link7">
+    <link name="link7">
         <inertial>
         <origin
             xyz="-0.000277778383727112 -0.0467673043650824 -0.00921029491873201"
@@ -292,15 +289,15 @@
         </geometry>
         </collision>
     </link>
-    <joint name="${namespace}/joint7" type="prismatic">
+    <joint name="joint7" type="prismatic">
         <origin xyz="0 0 0.13503" rpy="1.5708 0 1.5708" />
-        <parent link="${namespace}/link6" />
-        <child link="${namespace}/link7" />
+        <parent link="link6" />
+        <child link="link7" />
         <axis xyz="0 0 -1" />
         <limit lower="0" upper="0.05" effort="10" velocity="1" />
     </joint>
 
-    <link name="${namespace}/link8">
+    <link name="link8">
         <inertial>
         <origin
             xyz="0.000277816920932317 0.0467673824063769 -0.00921030054508036"
@@ -330,14 +327,13 @@
         </geometry>
         </collision>
     </link>
-    <joint name="${namespace}/joint8" type="prismatic">
+    <joint name="joint8" type="prismatic">
         <origin xyz="0 0 0.13503" rpy="-1.5708 0 1.5708" />
-        <parent link="${namespace}/link6" />
-        <child link="${namespace}/link8" />
+        <parent link="link6" />
+        <child link="link8" />
         <axis xyz="0 0 1" />
         <limit lower="-0.05" upper="0" effort="10" velocity="1" />
     </joint>
 
-</xacro:macro>
 
 </robot>
