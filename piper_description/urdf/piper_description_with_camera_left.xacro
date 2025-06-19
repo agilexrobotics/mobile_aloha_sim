@@ -29,7 +29,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://piper_description/meshes/dae/base_link.dae" />
+                <mesh filename="package://piper_description/meshes/base_link.STL" />
             </geometry>
         </collision>
     </link>
@@ -58,9 +58,9 @@
         </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 1.5708" />
             <geometry>
-                <mesh filename="package://piper_description/meshes/dae/link1.dae" />
+                <mesh filename="package://piper_description/meshes/link1.STL" />
             </geometry>
         </collision>
     </link>
@@ -96,9 +96,9 @@
         </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0" rpy="0 0 0" />
+            <origin xyz="0 0 0" rpy="0 0 0.1" />
             <geometry>
-                <mesh filename="package://piper_description/meshes/dae/link2.dae" />
+                <mesh filename="package://piper_description/meshes/link2.STL" />
             </geometry>
         </collision>
     </link>
@@ -134,9 +134,9 @@
         </material>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0 0" rpy="0 0 -1.75" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link3.dae" />
+            <mesh filename="package://piper_description/meshes/link3.STL" />
         </geometry>
         </collision>
     </link>
@@ -174,7 +174,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link4.dae" />
+            <mesh filename="package://piper_description/meshes/link4.STL" />
         </geometry>
         </collision>
     </link>
@@ -210,9 +210,9 @@
         </material>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="0 0 0" rpy="0 0 -3.14" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link5.dae" />
+            <mesh filename="package://piper_description/meshes/link5.STL" />
         </geometry>
         </collision>
     </link>
@@ -286,9 +286,9 @@
         </material>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="-0.001 0 0.0003" rpy="0 3.14 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link7.dae" />
+            <mesh filename="package://piper_description/meshes/link7.STL" />
         </geometry>
         </collision>
     </link>
@@ -324,9 +324,9 @@
         </material>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="-0.001 0 0.0003" rpy="3.14 0 0" />
         <geometry>
-            <mesh filename="package://piper_description/meshes/dae/link8.dae" />
+            <mesh filename="package://piper_description/meshes/link8.STL" />
         </geometry>
         </collision>
     </link>
