@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="split_aloha_rslidar_with_piper">
+    
+<xacro:include filename="$(find split_aloha_mid_360)/urdf/split_aloha_rslidar.xacro"/>
+
+<!-- <xacro:include filename="$(find piper_description)/urdf/piper_description_left.xacro"/> -->
+<xacro:include filename="$(find piper_description)/urdf/piper_description_with_camera_left.xacro"/>
+<xacro:include filename="$(find piper_description)/urdf/piper_description_with_camera_right.xacro"/>
+
+<!-- <xacro:include filename="$(find piper_description)/urdf/piper_description_right.xacro"/> -->
+
+<xacro:left_arm namespace="left">
+</xacro:left_arm>
+
+<xacro:right_arm namespace="right">
+</xacro:right_arm>
+
+<joint name="arm_and_lifting_left" type="fixed">
+    <origin xyz="0.144 0.306 0.138" rpy="0.0 0.0 0.0"/>
+    <parent link="lifting_link"/>
+    <child link="left/arm_base"/>
+    <axis xyz="0.0 0.0 0.0"/>
+    <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+</joint>
+
+<joint name="arm_and_lifting_right" type="fixed">
+    <origin xyz="0.144 -0.306 0.138" rpy="0.0 0.0 0.0"/>
+    <parent link="lifting_link"/>
+    <child link="right/arm_base"/>
+    <axis xyz="0.0 0.0 0.0"/>
+    <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+</joint>
+
+
+</robot>
