@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tracer2_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.037979422359657 -0.00314478249004299 -0.0259198905321653"
+        rpy="0 0 0" />
+      <mass
+        value="2.4239552885625" />
+      <inertia
+        ixx="0.0691541872284658"
+        ixy="0.000423483205221006"
+        ixz="-0.000201466160013829"
+        iyy="0.0588857794520233"
+        iyz="0.000250049528136794"
+        izz="0.125132015686105" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_link">
+    <inertial>
+      <origin
+        xyz="4.7341E-15 1.5543E-15 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.14836" />
+      <inertia
+        ixx="0.00013099"
+        ixy="3.4159E-20"
+        ixz="-4.7556E-20"
+        iyy="0.00013099"
+        iyz="1.0561E-21"
+        izz="0.00023781" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.018818 -0.2537 -0.0905"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_Link">
+    <inertial>
+      <origin
+        xyz="-8.2507E-18 0 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.14836" />
+      <inertia
+        ixx="0.00013099"
+        ixy="6.6936E-21"
+        ixz="1.4318E-19"
+        iyy="0.00013099"
+        iyz="-5.3812E-21"
+        izz="0.00023781" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/left_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/left_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_joint"
+    type="continuous">
+    <origin
+      xyz="-0.018818 0.2537 -0.0905"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right_front_link">
+    <inertial>
+      <origin
+        xyz="-0.013166 2.7397E-05 0.04181"
+        rpy="0 0 0" />
+      <mass
+        value="0.2864" />
+      <inertia
+        ixx="0.00029479"
+        ixy="5.5901E-08"
+        ixz="5.9543E-05"
+        iyy="0.00032696"
+        iyz="-1.5316E-07"
+        izz="0.00020885" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/right_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/right_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_joint"
+    type="fixed">
+    <origin
+      xyz="0.23918 -0.1977 -0.058"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_front_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_rear_link">
+    <inertial>
+      <origin
+        xyz="-0.013166 2.7397E-05 0.04181"
+        rpy="0 0 0" />
+      <mass
+        value="0.2864" />
+      <inertia
+        ixx="0.00029479"
+        ixy="5.5901E-08"
+        ixz="5.9543E-05"
+        iyy="0.00032696"
+        iyz="-1.5316E-07"
+        izz="0.00020885" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/right_rear_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/right_rear_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_rea_joint"
+    type="fixed">
+    <origin
+      xyz="-0.27082 -0.183 -0.058"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_rear_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_front_link">
+    <inertial>
+      <origin
+        xyz="-0.013166 -2.7397E-05 -0.04181"
+        rpy="0 0 0" />
+      <mass
+        value="0.2864" />
+      <inertia
+        ixx="0.00029479"
+        ixy="-5.5901E-08"
+        ixz="-5.9543E-05"
+        iyy="0.00032696"
+        iyz="-1.5316E-07"
+        izz="0.00020885" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/left_front_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/left_front_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_joint"
+    type="fixed">
+    <origin
+      xyz="0.23918 0.1977 -0.058"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_front_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_rear_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/left_rear_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tracer2_description/meshes/left_rear_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_rear_joint"
+    type="fixed">
+    <origin
+      xyz="-0.27077 0.18305 -0.058"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_rear_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
