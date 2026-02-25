@@ -7,9 +7,11 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
-        - /RobotModel1/Status1
+        - /RobotModel1/Links1
+        - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
-    Tree Height: 549
+    Tree Height: 719
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -163,12 +165,31 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        camera_stand_2_Link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         fl_base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        fl_castor_link:
+        fl_camera_bottom_screw_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        fl_camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_camera_stand:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fl_d435_camera_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -212,10 +233,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        fl_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
         footprint:
           Alpha: 1
           Show Axes: false
@@ -225,7 +242,21 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        fr_castor_link:
+        fr_camera_bottom_screw_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        fr_camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_camera_stand:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fr_d435_camera_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -269,46 +300,282 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        fr_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        inertial_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        left_wheel_link:
+        left_Link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        right_wheel_link:
+        left_front_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        rl_castor_link:
+        left_rear_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        rl_wheel_link:
+          Value: true
+        mid_l_camera_bottom_screw_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        rr_castor_link:
+        mid_l_camera_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        rr_wheel_link:
+          Value: true
+        mid_l_d435_camera_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        mid_r_camera_bottom_screw_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mid_r_camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mid_r_d435_camera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        right_front_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_rear_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        base_link:
+          Value: false
+        bl_base_link:
+          Value: false
+        bl_link1:
+          Value: false
+        bl_link2:
+          Value: false
+        bl_link3:
+          Value: false
+        bl_link4:
+          Value: false
+        bl_link5:
+          Value: false
+        bl_link6:
+          Value: false
+        bl_link7:
+          Value: false
+        bl_link8:
+          Value: false
+        body_Link:
+          Value: false
+        br_base_link:
+          Value: false
+        br_link1:
+          Value: false
+        br_link2:
+          Value: false
+        br_link3:
+          Value: false
+        br_link4:
+          Value: false
+        br_link5:
+          Value: false
+        br_link6:
+          Value: false
+        br_link7:
+          Value: false
+        br_link8:
+          Value: false
+        camera_stand_2_Link:
+          Value: false
+        fl_base_link:
+          Value: false
+        fl_camera_bottom_screw_frame:
+          Value: false
+        fl_camera_link:
+          Value: false
+        fl_camera_stand:
+          Value: false
+        fl_d435_camera_link:
+          Value: true
+        fl_link1:
+          Value: false
+        fl_link2:
+          Value: false
+        fl_link3:
+          Value: false
+        fl_link4:
+          Value: false
+        fl_link5:
+          Value: false
+        fl_link6:
+          Value: false
+        fl_link7:
+          Value: false
+        fl_link8:
+          Value: false
+        footprint:
+          Value: false
+        fr_base_link:
+          Value: false
+        fr_camera_bottom_screw_frame:
+          Value: false
+        fr_camera_link:
+          Value: false
+        fr_camera_stand:
+          Value: false
+        fr_d435_camera_link:
+          Value: false
+        fr_link1:
+          Value: false
+        fr_link2:
+          Value: false
+        fr_link3:
+          Value: false
+        fr_link4:
+          Value: false
+        fr_link5:
+          Value: false
+        fr_link6:
+          Value: false
+        fr_link7:
+          Value: false
+        fr_link8:
+          Value: false
+        left_Link:
+          Value: false
+        left_front_link:
+          Value: false
+        left_rear_link:
+          Value: false
+        mid_l_camera_bottom_screw_frame:
+          Value: false
+        mid_l_camera_link:
+          Value: false
+        mid_l_d435_camera_link:
+          Value: false
+        mid_r_camera_bottom_screw_frame:
+          Value: false
+        mid_r_camera_link:
+          Value: false
+        mid_r_d435_camera_link:
+          Value: false
+        right_front_link:
+          Value: false
+        right_link:
+          Value: false
+        right_rear_link:
+          Value: false
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        footprint:
+          base_link:
+            left_Link:
+              {}
+            left_front_link:
+              {}
+            left_rear_link:
+              {}
+            right_front_link:
+              {}
+            right_link:
+              {}
+            right_rear_link:
+              {}
+          body_Link:
+            bl_base_link:
+              bl_link1:
+                bl_link2:
+                  bl_link3:
+                    bl_link4:
+                      bl_link5:
+                        bl_link6:
+                          bl_link7:
+                            {}
+                          bl_link8:
+                            {}
+            br_base_link:
+              br_link1:
+                br_link2:
+                  br_link3:
+                    br_link4:
+                      br_link5:
+                        br_link6:
+                          br_link7:
+                            {}
+                          br_link8:
+                            {}
+            camera_stand_2_Link:
+              mid_l_d435_camera_link:
+                mid_l_camera_bottom_screw_frame:
+                  mid_l_camera_link:
+                    {}
+              mid_r_d435_camera_link:
+                mid_r_camera_bottom_screw_frame:
+                  mid_r_camera_link:
+                    {}
+            fl_base_link:
+              fl_link1:
+                fl_link2:
+                  fl_link3:
+                    fl_link4:
+                      fl_link5:
+                        fl_link6:
+                          fl_camera_stand:
+                            fl_d435_camera_link:
+                              fl_camera_bottom_screw_frame:
+                                fl_camera_link:
+                                  {}
+                          fl_link7:
+                            {}
+                          fl_link8:
+                            {}
+            fr_base_link:
+              fr_link1:
+                fr_link2:
+                  fr_link3:
+                    fr_link4:
+                      fr_link5:
+                        fr_link6:
+                          fr_camera_stand:
+                            fr_d435_camera_link:
+                              fr_camera_bottom_screw_frame:
+                                fr_camera_link:
+                                  {}
+                          fr_link7:
+                            {}
+                          fr_link8:
+                            {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -337,7 +604,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.7332229614257812
+      Distance: 0.5033079385757446
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -345,25 +612,25 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.16608142852783203
-        Y: -0.18386346101760864
-        Z: 0.4842974841594696
-      Focal Shape Fixed Size: true
+        X: 0.2892841398715973
+        Y: 0.254119873046875
+        Z: 0.9731231331825256
+      Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.4703979790210724
+      Pitch: 0.2553982734680176
       Target Frame: <Fixed Frame>
-      Yaw: 0.7253977656364441
+      Yaw: 1.5135831832885742
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 846
+  Height: 1016
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001e9000002b0fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000002b0000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002b0fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000002b0000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000006410000003efc0100000002fb0000000800540069006d0065010000000000000641000003bc00fffffffb0000000800540069006d006501000000000000045000000000000000000000033d000002b000000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001e90000035afc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d0000035a000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000035afc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d0000035a000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000007380000003efc0100000002fb0000000800540069006d0065010000000000000738000003bc00fffffffb0000000800540069006d00650100000000000004500000000000000000000004340000035a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -372,6 +639,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1601
-  X: 60
+  Width: 1848
+  X: 72
   Y: 27

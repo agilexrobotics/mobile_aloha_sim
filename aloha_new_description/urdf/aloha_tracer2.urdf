@@ -6,6 +6,7 @@
     <!-- <link name="footprint"/> -->
 
     <!-- <xacro:include filename="$(find tracer_description)/urdf/tracer_v1.xacro"/> -->
+<xacro:include filename="$(find realsense2_description)/urdf/test_d435_camera.urdf.xacro" />
 
     <link name="footprint">
     </link>
@@ -384,7 +385,7 @@
         <visual>
             <origin xyz="0 0 0.168" rpy="0 0 3.14" />
             <geometry>
-                <mesh filename="package://aloha_new_description/meshes/body.dae" />
+                <mesh filename="package://aloha_new_description/meshes/body_v2.dae" />
             </geometry>
             <material name="">
                 <color rgba="0.79216 0.81961 0.93333 1" />
@@ -393,7 +394,7 @@
         <collision>
             <origin xyz="0 0 0.168" rpy="0 0 3.14" />
             <geometry>
-                <mesh filename="package://aloha_new_description/meshes/body.dae" />
+                <mesh filename="package://aloha_new_description/meshes/body_v2.dae" />
             </geometry>
         </collision>
     </link>
@@ -403,6 +404,75 @@
         <child link="body_Link" />
         <axis xyz="0 0 0" />
     </joint>
+
+    <link name="camera_stand_1_Link">
+        <inertial>
+            <origin xyz="0.015107 -0.027922 0.00013672" rpy="0 0 0" />
+            <mass value="3.736" />
+            <inertia ixx="0.097545" ixy="-9.2609E-06" ixz="0.00015366" iyy="0.045841" iyz="-0.0020459" izz="0.084773" />
+        </inertial>
+        <visual>
+            <origin xyz="0.025 0 0.0" rpy="0 3.14 0" />
+            <geometry>
+                <mesh filename="package://aloha_new_description/meshes/camera_stand_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.025 0 0.0" rpy="0 3.14 0" />
+            <geometry>
+                <mesh filename="package://aloha_new_description/meshes/camera_stand_1.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="camera_stand_1_joint" type="prismatic">
+        <origin xyz="0.18 0 0.87" rpy="0 0 0" />
+        <parent link="body_Link" />
+        <child link="camera_stand_1_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="0.5" effort="10" velocity="1"/>
+    </joint>
+
+    <link name="camera_stand_2_Link">
+        <inertial>
+            <origin xyz="0.015107 -0.027922 0.00013672" rpy="0 0 0" />
+            <mass value="3.736" />
+            <inertia ixx="0.097545" ixy="-9.2609E-06" ixz="0.00015366" iyy="0.045841" iyz="-0.0020459" izz="0.084773" />
+        </inertial>
+        <visual>
+            <origin xyz="0.0 0 0.0" rpy="0.0 3.14 0.0" />
+            <geometry>
+                <mesh filename="package://aloha_new_description/meshes/camera_stand_2.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://aloha_new_description/meshes/camera_stand_2.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="camera_stand_2_joint" type="revolute">
+        <origin xyz="0.043 0.0 -0.002" rpy="0 0 0" />
+        <parent link="camera_stand_1_Link" />
+        <child link="camera_stand_2_Link" />
+        <axis xyz="0 1 0" />
+        <limit lower="-0.52" upper="0.52" effort="10" velocity="1.0"/>
+    </joint>
+
+    <joint name="d435_camera_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="camera_stand_2_Link"/>
+        <child link="d435_camera_link"/>
+        <axis xyz="0.0 0.0 0.0"/>
+        <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+    </joint>
+
     <!--***************************** front-left ****************************** -->
     <link name="fl_base_link">
         <inertial>
