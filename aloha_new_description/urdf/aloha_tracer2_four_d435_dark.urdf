@@ -22,11 +22,11 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="-0.019 0 -0.119"
+        rpy="0 0 1.57" />
       <geometry>
         <mesh
-          filename="package://tracer2_description/meshes/base_link.STL" />
+          filename="package://aloha_new_description/meshes/tracer2.dae" />
       </geometry>
       <material
         name="">
@@ -475,7 +475,7 @@
             </material>
         </visual>
         <collision>
-            <origin xyz="0 0 0.0" rpy="0 0 0" />
+            <origin xyz="0.0 0 0.0" rpy="0.0 1.57 0.0" />
             <geometry>
                 <mesh filename="package://aloha_new_description/meshes/camera_stand_2.dae" />
             </geometry>
@@ -839,7 +839,7 @@
         </geometry>
         </visual>
         <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
+        <origin xyz="-0.0025 0 0" rpy="0 0 0" />
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/dark_dae/d435_camera_stand.dae" />
         </geometry>
@@ -873,9 +873,9 @@
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 -0.0175 0"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0043 0.0 0"/>
       <geometry>
-        <box size="0.02505 0.09 0.025"/>
+        <mesh filename="package://realsense2_description/meshes/d435.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -1288,9 +1288,9 @@
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 -0.0175 0"/>
+      <origin rpy="0.0 0.0 0.0" xyz="0.0043 0.0 0"/>
       <geometry>
-        <box size="0.02505 0.09 0.025"/>
+        <mesh filename="package://realsense2_description/meshes/d435.dae"/>
       </geometry>
     </collision>
     <inertial>

@@ -22,11 +22,11 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="-0.019 0 -0.119"
+        rpy="0 0 1.57" />
       <geometry>
         <mesh
-          filename="package://tracer2_description/meshes/base_link.STL" />
+          filename="package://aloha_new_description/meshes/tracer2.dae" />
       </geometry>
       <material
         name="">
@@ -772,7 +772,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0.0 -1.57 -1.57" xyz="0.0 0.0 0"/>
       <geometry>
         <box size="0.02505 0.09 0.025"/>
       </geometry>
@@ -924,9 +924,6 @@
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/dark_dae/link1.dae" />
         </geometry>
-        <material name="">
-            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-        </material>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -962,9 +959,6 @@
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/dark_dae/link2.dae" />
         </geometry>
-        <material name="">
-            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-        </material>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -1000,9 +994,6 @@
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/dark_dae/link3.dae" />
         </geometry>
-        <material name="">
-            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-        </material>
         </visual>
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -1038,9 +1029,6 @@
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/dark_dae/link4.dae" />
         </geometry>
-        <material name="">
-            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-        </material>
         </visual>
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -1076,9 +1064,6 @@
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/dark_dae/link5.dae" />
         </geometry>
-        <material name="">
-            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-        </material>
         </visual>
         <collision>
         <origin xyz="0 0 0" rpy="0 0 -3.14" />
@@ -1114,9 +1099,6 @@
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/dark_dae/link6_.dae" />
         </geometry>
-        <material name="">
-            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-        </material>
         </visual>
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -1152,9 +1134,6 @@
         <geometry>
             <mesh filename="package://aloha_new_description/meshes/dark_dae/camera_stand.dae" />
         </geometry>
-        <material name="">
-            <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-        </material>
         </visual>
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -1177,7 +1156,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0.0 -1.57 -1.57" xyz="0.0 0.0 0"/>
       <geometry>
         <box size="0.02505 0.09 0.025"/>
       </geometry>
