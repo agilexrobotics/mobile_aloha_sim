@@ -477,7 +477,7 @@
         <collision>
             <origin xyz="0.0 0 0.0" rpy="0.0 1.57 0.0" />
             <geometry>
-                <mesh filename="package://aloha_new_description/meshes/camera_stand_2.dae" />
+                <mesh filename="package://aloha_new_description/meshes/dark_dae/mid_double_camera_stand.dae" />
             </geometry>
         </collision>
     </link>
@@ -598,7 +598,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/base_link.dae" />
             </geometry>
         </collision>
     </link>
@@ -772,7 +772,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 -3.14" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link5.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link5.dae" />
         </geometry>
         </collision>
     </link>
@@ -995,7 +995,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/base_link.dae" />
             </geometry>
         </collision>
     </link>
@@ -1184,7 +1184,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 -3.14" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link5.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link5.dae" />
         </geometry>
         </collision>
     </link>
@@ -1410,7 +1410,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/base_link.dae" />
         </geometry>
         </collision>
     </link>
@@ -1599,7 +1599,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 -3.14" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link5.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link5.dae" />
         </geometry>
         </collision>
     </link>
@@ -1637,7 +1637,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link6_.dae" />
         </geometry>
         </collision>
     </link>
@@ -1675,7 +1675,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link7_master.dae" />
         </geometry>
         </collision>
     </link>
@@ -1713,7 +1713,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link8_master.dae" />
         </geometry>
         </collision>
     </link>
@@ -1751,7 +1751,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/base_link.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/base_link.dae" />
         </geometry>
         </collision>
     </link>
@@ -1940,7 +1940,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 -3.14" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/link5.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link5.dae" />
         </geometry>
         </collision>
     </link>
@@ -1978,7 +1978,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link6.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link6_.dae" />
         </geometry>
         </collision>
     </link>
@@ -2016,7 +2016,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link7.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link7_master.dae" />
         </geometry>
         </collision>
     </link>
@@ -2054,7 +2054,7 @@
         <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://aloha_new_description/meshes/piper_master_meshes/link8.STL" />
+            <mesh filename="package://aloha_new_description/meshes/dark_dae/link8_master.dae" />
         </geometry>
         </collision>
     </link>
