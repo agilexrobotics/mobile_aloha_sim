@@ -131,7 +131,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+      <origin rpy="1.57 0 0" xyz="0 0 -0.005"/>
       <geometry>
         <cylinder length="0.08" radius="0.09"/>
       </geometry>
@@ -192,7 +192,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin rpy="1.57 0 0" xyz="0.005 0.005 -0.005"/>
+      <origin rpy="1.57 0 0" xyz="0.00 0.00 -0.005"/>
       <geometry>
         <cylinder length="0.08" radius="0.09"/>
       </geometry>
@@ -248,7 +248,7 @@
       </geometry>
     </visual>
     <collision>
-      <origin rpy="1.57 0 0" xyz="-0.015 0.02 -0.005"/>
+      <origin rpy="1.57 0 0" xyz="0.00 0 -0.005"/>
       <geometry>
         <cylinder length="0.08" radius="0.09"/>
       </geometry>
@@ -517,7 +517,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://piper_description/meshes/base_link.STL"/>
+        <mesh filename="package://piper_description/meshes/dae/base_link.dae"/>
       </geometry>
     </collision>
   </link>
@@ -537,7 +537,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 1.5708" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link1.STL"/>
       </geometry>
@@ -566,7 +566,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0.1" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link2.STL"/>
       </geometry>
@@ -595,7 +595,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 -1.75" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link3.STL"/>
       </geometry>
@@ -653,7 +653,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 -3.14" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link5.STL"/>
       </geometry>
@@ -673,18 +673,18 @@
       <inertia ixx="6.43790256535539E-05" ixy="-1.2366166157046E-06" ixz="1.97664606328472E-07" iyy="0.000126146396374301" iyz="2.41157078516408E-06" izz="0.000154087076816444"/>
     </inertial>
     <visual>
-      <origin rpy="-1.57 0 0" xyz="-0.002 -0.0078 0.06"/>
+      <origin rpy="-1.57 0 0" xyz="-0.002 -0.008 0"/>
       <geometry>
-        <mesh filename="package://piper_description/meshes/dae/gripper_base_100_v2.dae"/>
+        <mesh filename="package://piper_description/meshes/dae/camera_v3.dae"/>
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
     <collision>
-      <origin rpy="-1.57 0 0" xyz="-0.002 -0.0078 0.06"/>
+      <origin rpy="-1.57 0 0" xyz="-0.002 -0.008 0"/>
       <geometry>
-        <mesh filename="package://piper_description/meshes/dae/gripper_base_100_v2.dae"/>
+        <mesh filename="package://piper_description/meshes/dae/camera_v3.dae"/>
       </geometry>
     </collision>
   </link>
@@ -711,7 +711,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 3.14 0" xyz="-0.001 0 0.0003"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link7.STL"/>
       </geometry>
@@ -740,7 +740,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="3.14 0 0" xyz="-0.001 0 0.0003"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link8.STL"/>
       </geometry>
@@ -771,7 +771,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://piper_description/meshes/base_link.STL"/>
+        <mesh filename="package://piper_description/meshes/dae/base_link.dae"/>
       </geometry>
     </collision>
   </link>
@@ -791,7 +791,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 1.5708" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link1.STL"/>
       </geometry>
@@ -820,7 +820,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 0.1" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link2.STL"/>
       </geometry>
@@ -849,7 +849,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 -1.75" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link3.STL"/>
       </geometry>
@@ -907,7 +907,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 0 -3.14" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link5.STL"/>
       </geometry>
@@ -927,19 +927,18 @@
       <inertia ixx="6.43790256535539E-05" ixy="-1.2366166157046E-06" ixz="1.97664606328472E-07" iyy="0.000126146396374301" iyz="2.41157078516408E-06" izz="0.000154087076816444"/>
     </inertial>
     <visual>
-      <origin rpy="-1.57 0 0" xyz="-0.002 -0.0078 0.06"/>
+      <origin rpy="-1.57 0 0" xyz="-0.002 -0.008 0"/>
       <geometry>
-        <mesh filename="package://piper_description/meshes/dae/gripper_base_100_v2.dae"/>
+        <mesh filename="package://piper_description/meshes/dae/camera_v3.dae"/>
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <origin rpy="-1.57 0 0" xyz="-0.002 -0.0078 0.06"/>
+      <origin rpy="-1.57 0 0" xyz="-0.002 -0.008 0"/>
       <geometry>
-        <mesh filename="package://piper_description/meshes/dae/gripper_base_100_v2.dae"/>
+        <mesh filename="package://piper_description/meshes/dae/camera_v3.dae"/>
       </geometry>
     </collision>
   </link>
@@ -966,7 +965,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="0 3.14 0" xyz="-0.001 0 0.0003"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link7.STL"/>
       </geometry>
@@ -995,7 +994,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="3.14 0 0" xyz="-0.001 0 0.0003"/>
       <geometry>
         <mesh filename="package://piper_description/meshes/link8.STL"/>
       </geometry>
@@ -1023,4 +1022,3 @@
     <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
   </joint>
 </robot>
-

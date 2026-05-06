@@ -265,7 +265,98 @@
     <child link="rr_wheel_link"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
   </joint>
-  
+  <!-- 
+	<transmission name="fl_steering_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="fl_steering_joint">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="fl_steering_wheel_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+	<transmission name="fr_steering_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="fr_steering_joint">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="fr_steering_wheel_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+	<transmission name="rl_steering_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rl_steering_joint">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="rl_steering_wheel_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+	<transmission name="rr_steering_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rr_steering_joint">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="rr_steering_wheel_motor">
+		<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+	<transmission name="fl_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="fl_wheel">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="fl_wheel_motor">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+	<transmission name="fr_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="fr_wheel">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="fr_wheel_motor">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+	<transmission name="rl_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rl_wheel">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="rl_wheel_motor">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+
+	<transmission name="rr_wheel_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="rr_wheel">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+	  <actuator name="rr_wheel_motor">
+		<hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+		<mechanicalReduction>30</mechanicalReduction>
+      </actuator>
+	</transmission>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    </plugin>
+  </gazebo> -->
   <link name="box_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.10921 -0.0087718 0.52779"/>
@@ -430,7 +521,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://piper_description/meshes/base_link.STL"/>
+        <mesh filename="package://piper_description/meshes/dae/base_link.dae"/>
       </geometry>
     </collision>
   </link>
@@ -684,7 +775,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://piper_description/meshes/base_link.STL"/>
+        <mesh filename="package://piper_description/meshes/dae/base_link.dae"/>
       </geometry>
     </collision>
   </link>
@@ -935,4 +1026,3 @@
     <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
   </joint>
 </robot>
-

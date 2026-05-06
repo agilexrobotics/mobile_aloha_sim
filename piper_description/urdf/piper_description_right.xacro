@@ -28,7 +28,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://piper_description/meshes/base_link.STL" />
+            <mesh filename="package://piper_description/meshes/dae/base_link.dae" />
             </geometry>
         </collision>
     </link>
